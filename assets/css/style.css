@@ -200,6 +200,30 @@ p { margin: 0; }
   cursor: pointer;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  margin-left: 1.25rem;
+}
+.lang-switch a {
+  color: var(--ink-faint);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+.lang-switch a:hover {
+  color: var(--aqua-bright);
+}
+.lang-switch a.active {
+  color: var(--ink);
+  border-color: var(--aqua-bright);
+}
+
 /* ---------------- Hero ---------------- */
 
 .hero {
@@ -651,6 +675,76 @@ section { padding: 5.5rem 0; }
   font-size: 0.82rem;
   color: var(--ink-faint);
 }
+
+.people-category {
+  margin-bottom: 3rem;
+}
+.people-category:last-child {
+  margin-bottom: 0;
+}
+.people-category > .eyebrow {
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+.person-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.6rem;
+}
+.person-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--teal-panel);
+  color: #eaf3f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  overflow: hidden;
+  margin-bottom: 1.1rem;
+}
+.person-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.person-card h5 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  margin-bottom: 0.15rem;
+}
+.person-role {
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  margin-bottom: 0.7rem;
+}
+.person-bio {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+.person-link {
+  margin-top: 0.9rem;
+  display: inline-flex;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--aqua-bright);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.person-link:hover { border-color: var(--aqua-bright); }
 
 /* ---------------- Resultados ---------------- */
 
