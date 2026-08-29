@@ -178,6 +178,10 @@ p { margin: 0; }
 }
 
 .nav-links a {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
   text-decoration: none;
   color: var(--ink-soft);
   border-bottom: 1px solid transparent;
@@ -185,13 +189,23 @@ p { margin: 0; }
   white-space: nowrap;
   transition: color 0.2s, border-color 0.2s;
 }
+.nav-links a::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.2s;
+}
 .nav-links a:hover, .nav-links a:focus-visible {
   color: var(--aqua);
   border-color: var(--aqua);
 }
 .nav-links a.active {
   color: var(--aqua);
-  border-color: var(--aqua);
+}
+.nav-links a.active::after {
+  background: var(--aqua);
 }
 
 .nav-toggle {
