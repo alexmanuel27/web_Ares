@@ -12,10 +12,10 @@
   --ink-faint: #7686a8;
   --line: rgba(22, 35, 61, 0.14);
   --line-strong: rgba(22, 35, 61, 0.28);
-  --teal-deep: #16294a;
-  --teal-panel: #1f3a63;
+  --teal-deep: #1c2c52;
+  --teal-panel: #2c4a86;
   --aqua: #9c6210;
-  --aqua-bright: #c9820f;
+  --aqua-bright: #f5a300;
   --oxide: #c0392b;
   --shadow: 0 24px 60px -32px rgba(15, 25, 50, 0.45);
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
@@ -34,10 +34,10 @@
     --ink-faint: #7c8bb0;
     --line: rgba(238, 241, 248, 0.14);
     --line-strong: rgba(238, 241, 248, 0.3);
-    --teal-deep: #060f1f;
-    --teal-panel: #0d1e38;
+    --teal-deep: #0b1428;
+    --teal-panel: #1c2c52;
     --aqua: #d99a3e;
-    --aqua-bright: #f2ac3c;
+    --aqua-bright: #ffb62e;
     --oxide: #ff6b52;
     --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.65);
   }
@@ -93,7 +93,7 @@ a { color: inherit; }
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--aqua-bright);
+  color: var(--aqua);
 }
 
 h1, h2, h3, h4 {
@@ -186,12 +186,12 @@ p { margin: 0; }
   transition: color 0.2s, border-color 0.2s;
 }
 .nav-links a:hover, .nav-links a:focus-visible {
-  color: var(--aqua-bright);
-  border-color: var(--aqua-bright);
+  color: var(--aqua);
+  border-color: var(--aqua);
 }
 .nav-links a.active {
-  color: var(--aqua-bright);
-  border-color: var(--aqua-bright);
+  color: var(--aqua);
+  border-color: var(--aqua);
 }
 
 .nav-toggle {
@@ -223,7 +223,7 @@ p { margin: 0; }
   border-bottom: 1px solid transparent;
 }
 .lang-switch a:hover {
-  color: var(--aqua-bright);
+  color: var(--aqua);
 }
 .lang-switch a.active {
   color: var(--ink);
@@ -661,7 +661,7 @@ section { padding: 5.5rem 0; }
   font-size: 0.7rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--aqua-bright);
+  color: var(--aqua);
   margin-bottom: 1rem;
 }
 .equipo-card ul {
@@ -746,11 +746,11 @@ section { padding: 5.5rem 0; }
   font-size: 0.7rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--aqua-bright);
+  color: var(--aqua);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-.person-link:hover { border-color: var(--aqua-bright); }
+.person-link:hover { border-color: var(--aqua); }
 
 /* ---------------- Resultados ---------------- */
 
@@ -794,11 +794,11 @@ section { padding: 5.5rem 0; }
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--aqua-bright);
+  color: var(--aqua);
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s, gap 0.2s;
 }
-.arrow-link:hover { border-color: var(--aqua-bright); gap: 0.6rem; }
+.arrow-link:hover { border-color: var(--aqua); gap: 0.6rem; }
 
 .hub-grid {
   display: grid;
