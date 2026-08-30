@@ -854,6 +854,19 @@ section { padding: 5.5rem 0; }
 
 /* ---------------- Reports ---------------- */
 
+.report-year-block {
+  margin-bottom: 2.5rem;
+}
+.report-year-block:last-of-type {
+  margin-bottom: 0;
+}
+.report-year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  color: var(--aqua);
+  margin-bottom: 0.6rem;
+}
 .reports-list {
   border-top: 1px solid var(--line);
 }

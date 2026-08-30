@@ -41,4 +41,17 @@
   // Current year in footer
   var yearEl = document.getElementById("year");
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+  // Bio soundtrack: play a track while its <details> bio is open
+  var bioAudio = null;
+  document.querySelectorAll(".person-bio-details[data-track]").forEach(function (det) {
+    det.addEventListener("toggle", function () {
+      if (bioAudio) { bioAudio.pause(); bioAudio = null; }
+      if (det.open) {
+        bioAudio = new Audio(det.getAttribute("data-track"));
+        bioAudio.volume = 0.5;
+        bioAudio.play().catch(function () {});
+      }
+    });
+  });
 })();
