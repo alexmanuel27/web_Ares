@@ -765,6 +765,40 @@ section { padding: 5.5rem 0; }
   border-bottom: 1px solid transparent;
 }
 .person-link:hover { border-color: var(--aqua); }
+.person-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+}
+.person-links .person-link { margin-top: 0.6rem; }
+.person-bio-details {
+  margin-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.8rem;
+}
+.person-bio-details summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--aqua);
+  list-style: none;
+}
+.person-bio-details summary::-webkit-details-marker { display: none; }
+.person-bio-details[open] summary { margin-bottom: 0.7rem; }
+.person-bio-full {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.person-bio-full p + p { margin-top: 0.7rem; }
+.person-bio-full a {
+  color: var(--aqua);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.person-bio-full a:hover { color: var(--aqua-bright); }
 
 /* ---------------- Resultados ---------------- */
 
@@ -789,6 +823,58 @@ section { padding: 5.5rem 0; }
   color: var(--ink-faint);
   display: block;
   margin-top: 0.4rem;
+}
+
+/* ---------------- Gallery ---------------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+.gallery-tile {
+  margin: 0;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.gallery-tile img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.gallery-tile figcaption {
+  padding: 0.85rem 1rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+/* ---------------- Reports ---------------- */
+
+.reports-list {
+  border-top: 1px solid var(--line);
+}
+.report-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.report-period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}
+.report-title { color: var(--ink); font-weight: 500; }
+.report-action { justify-self: end; text-align: right; }
+.report-pending {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
 }
 
 /* ---------------- Home: mission teaser + hub grid ---------------- */
@@ -933,4 +1019,6 @@ footer {
   .stat:first-child { border-top: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .resultado { grid-template-columns: 1fr; }
+  .report-row { grid-template-columns: 1fr; gap: 0.4rem; }
+  .report-action { justify-self: start; text-align: left; }
 }
