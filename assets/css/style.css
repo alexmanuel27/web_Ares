@@ -872,7 +872,7 @@ section { padding: 5.5rem 0; }
 }
 .report-row {
   display: grid;
-  grid-template-columns: 1fr 1fr auto;
+  grid-template-columns: 1fr 1fr 180px;
   gap: 1.5rem;
   align-items: center;
   padding: 1.1rem 0;
