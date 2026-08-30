@@ -799,6 +799,13 @@ section { padding: 5.5rem 0; }
   text-underline-offset: 2px;
 }
 .person-bio-full a:hover { color: var(--aqua-bright); }
+.person-bio-full a.bio-cite {
+  font-size: 0.72em;
+  vertical-align: super;
+  text-decoration: none;
+  margin-left: 1px;
+}
+.person-bio-full a.bio-cite:hover { text-decoration: underline; }
 
 /* ---------------- Resultados ---------------- */
 
