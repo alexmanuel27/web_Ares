@@ -950,6 +950,9 @@ section { padding: 5.5rem 0; }
   font-size: 0.92rem;
 }
 .hub-card .arrow-link { margin-top: 1.1rem; }
+.hub-card.has-thumb { padding: 0; overflow: hidden; }
+.hub-card-thumb { display: block; width: 100%; height: 160px; object-fit: cover; }
+.hub-card-body { padding: 1.5rem 1.75rem 1.75rem; }
 
 .funding-note {
   margin-top: 2rem;
