@@ -586,32 +586,61 @@ section { padding: 5.5rem 0; }
   display: none;
 }
 
+@keyframes orbit-float {
+  0%   { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(-50%, -50%) translate(3px, -7px) rotate(1.5deg); }
+  50%  { transform: translate(-50%, -50%) translate(-3px, -11px) rotate(-1deg); }
+  75%  { transform: translate(-50%, -50%) translate(-4px, -3px) rotate(1deg); }
+  100% { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
+}
+@keyframes orbit-center-pulse {
+  0%, 100% { box-shadow: var(--shadow), 0 0 0 0 rgba(245, 163, 0, 0.35); }
+  50%      { box-shadow: var(--shadow), 0 0 0 12px rgba(245, 163, 0, 0); }
+}
+
 @media (min-width: 880px) {
   .partners-orbit {
     position: relative;
-    height: 620px;
-    max-width: 620px;
+    height: 660px;
+    max-width: 720px;
     margin: 1.5rem auto 0;
   }
-  .partners-orbit::before {
-    content: "";
+  .partners-orbit .orbit-line {
     position: absolute;
-    inset: 60px;
-    border: 1px dashed var(--line);
-    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    width: var(--len);
+    height: 0;
+    border-top: 1px dashed var(--line-strong);
+    transform-origin: 0 0;
+    transform: rotate(var(--ang));
+    z-index: 0;
     pointer-events: none;
+    opacity: 0.55;
   }
   .partners-orbit .partner-node {
     position: absolute;
     top: calc(50% + var(--y));
     left: calc(50% + var(--x));
-    width: 108px;
-    height: 78px;
-    transform: translate(-50%, -50%);
+    width: 112px;
+    height: 112px;
+    padding: 0.85rem;
+    border-radius: 50%;
     z-index: 1;
+    transform: translate(-50%, -50%);
+    animation: orbit-float var(--dur, 6s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+  .partners-orbit .partner-node img {
+    max-width: 62%;
+    max-height: 62%;
+  }
+  .partners-orbit .partner-node.is-text {
+    font-size: 0.62rem;
   }
   .partners-orbit .partner-node:hover {
-    transform: translate(-50%, -50%) translateY(-4px);
+    animation-play-state: paused;
+    transform: translate(-50%, -50%) translateY(-6px);
     z-index: 2;
   }
   .partners-orbit-center {
@@ -633,6 +662,7 @@ section { padding: 5.5rem 0; }
     border-radius: 50%;
     box-shadow: var(--shadow);
     z-index: 3;
+    animation: orbit-center-pulse 3.4s ease-in-out infinite;
   }
   .partners-orbit-center img {
     width: 54px;
@@ -645,6 +675,13 @@ section { padding: 5.5rem 0; }
     font-size: 0.92rem;
     line-height: 1.15;
     color: var(--ink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners-orbit .partner-node,
+  .partners-orbit-center {
+    animation: none;
   }
 }
 
