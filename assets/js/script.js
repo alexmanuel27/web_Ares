@@ -73,6 +73,24 @@
   }
 
   var banner = document.getElementById("cookie-banner");
+
+  // Keep the banner glued to the TRUE visible viewport, not the layout
+  // viewport. On mobile browsers with a dynamic address/tab bar (notably
+  // iOS Safari), "position:fixed;bottom:0" can paint the banner under the
+  // browser's own UI while the layout viewport still reports it as
+  // on-screen — it's visible but untappable. visualViewport tracks what's
+  // actually visible, so we position against that instead.
+  if (banner && window.visualViewport) {
+    var positionBanner = function () {
+      var vv = window.visualViewport;
+      var offsetBottom = window.innerHeight - (vv.height + vv.offsetTop);
+      banner.style.bottom = Math.max(0, offsetBottom) + "px";
+    };
+    window.visualViewport.addEventListener("resize", positionBanner);
+    window.visualViewport.addEventListener("scroll", positionBanner);
+    positionBanner();
+  }
+
   var acceptBtn = document.getElementById("cookie-accept");
   var declineBtn = document.getElementById("cookie-decline");
   var consent = null;
