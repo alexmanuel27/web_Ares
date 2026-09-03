@@ -84,17 +84,26 @@
     banner.hidden = false;
   }
 
-  if (acceptBtn) {
-    acceptBtn.addEventListener("click", function () {
-      try { localStorage.setItem(CONSENT_KEY, "accepted"); } catch (e) {}
-      banner.hidden = true;
-      loadGA();
-    });
+  function accept() {
+    try { localStorage.setItem(CONSENT_KEY, "accepted"); } catch (e) {}
+    if (banner) { banner.hidden = true; }
+    loadGA();
   }
-  if (declineBtn) {
-    declineBtn.addEventListener("click", function () {
-      try { localStorage.setItem(CONSENT_KEY, "declined"); } catch (e) {}
-      banner.hidden = true;
-    });
+  function decline() {
+    try { localStorage.setItem(CONSENT_KEY, "declined"); } catch (e) {}
+    if (banner) { banner.hidden = true; }
   }
+
+  // Direct listeners on the buttons...
+  if (acceptBtn) { acceptBtn.addEventListener("click", accept); }
+  if (declineBtn) { declineBtn.addEventListener("click", decline); }
+
+  // ...plus delegated listeners on document as a fallback, in case the
+  // direct references above ever go stale (e.g. a cached script race).
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (!t || !t.closest) { return; }
+    if (t.closest("#cookie-accept")) { accept(); }
+    else if (t.closest("#cookie-decline")) { decline(); }
+  });
 })();
