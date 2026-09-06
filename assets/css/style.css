@@ -618,13 +618,19 @@ section { padding: 5.5rem 0; }
     top: 50%;
     left: 50%;
     width: var(--len);
-    height: 0;
-    border-top: 1px dashed var(--line-strong);
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 22%,
+      color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 82%,
+      transparent
+    );
     transform-origin: 0 0;
-    transform: rotate(var(--ang));
+    transform: rotate(var(--ang)) translateY(-50%);
     z-index: 0;
     pointer-events: none;
-    opacity: 0.55;
+    opacity: 0.6;
   }
   .partners-orbit .partner-node {
     position: absolute;
@@ -668,8 +674,8 @@ section { padding: 5.5rem 0; }
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 240px;
-    height: 240px;
+    width: 270px;
+    height: 270px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -684,8 +690,8 @@ section { padding: 5.5rem 0; }
     animation: orbit-center-breathe 3.4s ease-in-out infinite;
   }
   .partners-orbit-center img {
-    width: 130px;
-    height: 130px;
+    width: 155px;
+    height: 155px;
     object-fit: contain;
     filter: drop-shadow(0 8px 14px rgba(22, 35, 61, 0.25));
   }
