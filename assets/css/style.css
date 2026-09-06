@@ -658,6 +658,10 @@ section { padding: 5.5rem 0; }
   animation: orbit-float var(--dur, 6s) ease-in-out infinite;
   animation-delay: var(--delay, 0s);
 }
+.partners-orbit .partner-node.is-large {
+  width: calc(138px * var(--orbit-scale));
+  height: calc(100px * var(--orbit-scale));
+}
 .partners-orbit .partner-node img {
   max-width: 100%;
   max-height: 100%;
