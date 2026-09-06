@@ -590,10 +590,6 @@ section { padding: 5.5rem 0; }
   color: var(--ink-soft);
 }
 
-.partners-orbit-center {
-  display: none;
-}
-
 @keyframes orbit-float {
   0%   { transform: translate(-50%, -50%) translate(0, 0) rotate(0deg); }
   25%  { transform: translate(-50%, -50%) translate(3px, -7px) rotate(1.5deg); }
@@ -606,103 +602,116 @@ section { padding: 5.5rem 0; }
   50%      { transform: translate(-50%, -50%) scale(1.05); }
 }
 
+.partner-logos.partners-orbit {
+  display: block;
+  --orbit-scale: 0.38;
+  position: relative;
+  height: calc(660px * var(--orbit-scale));
+  max-width: calc(720px * var(--orbit-scale));
+  margin: 1.5rem auto 0;
+}
+@media (min-width: 420px) {
+  .partner-logos.partners-orbit { --orbit-scale: 0.46; }
+}
+@media (min-width: 560px) {
+  .partner-logos.partners-orbit { --orbit-scale: 0.58; }
+}
+@media (min-width: 700px) {
+  .partner-logos.partners-orbit { --orbit-scale: 0.72; }
+}
 @media (min-width: 880px) {
-  .partners-orbit {
-    position: relative;
-    height: 660px;
-    max-width: 720px;
-    margin: 1.5rem auto 0;
-  }
-  .partners-orbit .orbit-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: var(--len);
-    height: 2px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 22%,
-      color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 82%,
-      transparent
-    );
-    transform-origin: 0 0;
-    transform: rotate(var(--ang)) translateY(-50%);
-    z-index: 0;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  .partners-orbit .partner-node {
-    position: absolute;
-    top: calc(50% + var(--y));
-    left: calc(50% + var(--x));
-    width: 100px;
-    height: 72px;
-    padding: 0;
-    background: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    animation: orbit-float var(--dur, 6s) ease-in-out infinite;
-    animation-delay: var(--delay, 0s);
-  }
-  .partners-orbit .partner-node img {
-    max-width: 100%;
-    max-height: 100%;
-    filter: drop-shadow(0 6px 10px rgba(22, 35, 61, 0.22));
-  }
-  .partners-orbit .partner-node.is-text {
-    font-size: 0.68rem;
-    color: var(--ink-soft);
-    text-shadow: 0 1px 6px var(--panel);
-  }
-  .partners-orbit .partner-node:hover {
-    animation-play-state: paused;
-    transform: translate(-50%, -50%) translateY(-6px);
-    box-shadow: none;
-    border-color: transparent;
-    z-index: 2;
-  }
-  .partners-orbit .partner-node:hover img {
-    filter: drop-shadow(0 10px 16px rgba(22, 35, 61, 0.28));
-  }
-  .partners-orbit-center {
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 270px;
-    height: 270px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-    background: none;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    z-index: 3;
-    animation: orbit-center-breathe 3.4s ease-in-out infinite;
-  }
-  .partners-orbit-center img {
-    width: 155px;
-    height: 155px;
-    object-fit: contain;
-    filter: drop-shadow(0 8px 14px rgba(22, 35, 61, 0.25));
-  }
-  .partners-orbit-center span {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 1.08rem;
-    text-shadow: 0 1px 8px var(--panel);
-    line-height: 1.15;
-    color: var(--ink);
-  }
+  .partner-logos.partners-orbit { --orbit-scale: 1; }
+}
+
+.partners-orbit .orbit-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--len) * var(--orbit-scale));
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 22%,
+    color-mix(in srgb, var(--aqua-bright) 55%, var(--line-strong)) 82%,
+    transparent
+  );
+  transform-origin: 0 0;
+  transform: rotate(var(--ang)) translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+.partners-orbit .partner-node {
+  position: absolute;
+  top: calc(50% + (var(--y) * var(--orbit-scale)));
+  left: calc(50% + (var(--x) * var(--orbit-scale)));
+  width: calc(100px * var(--orbit-scale));
+  height: calc(72px * var(--orbit-scale));
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  animation: orbit-float var(--dur, 6s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+.partners-orbit .partner-node img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: drop-shadow(0 6px 10px rgba(22, 35, 61, 0.22));
+}
+.partners-orbit .partner-node.is-text {
+  font-size: calc(0.68rem * var(--orbit-scale));
+  color: var(--ink-soft);
+  text-shadow: 0 1px 6px var(--panel);
+}
+.partners-orbit .partner-node:hover {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) translateY(calc(-6px * var(--orbit-scale)));
+  box-shadow: none;
+  border-color: transparent;
+  z-index: 2;
+}
+.partners-orbit .partner-node:hover img {
+  filter: drop-shadow(0 10px 16px rgba(22, 35, 61, 0.28));
+}
+.partners-orbit-center {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(270px * var(--orbit-scale));
+  height: calc(270px * var(--orbit-scale));
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: calc(1rem * var(--orbit-scale));
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  z-index: 3;
+  animation: orbit-center-breathe 3.4s ease-in-out infinite;
+}
+.partners-orbit-center img {
+  width: calc(155px * var(--orbit-scale));
+  height: calc(155px * var(--orbit-scale));
+  object-fit: contain;
+  filter: drop-shadow(0 8px 14px rgba(22, 35, 61, 0.25));
+}
+.partners-orbit-center span {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: calc(1.08rem * var(--orbit-scale) + 0.5rem);
+  text-shadow: 0 1px 8px var(--panel);
+  line-height: 1.15;
+  color: var(--ink);
 }
 
 @media (prefers-reduced-motion: reduce) {
