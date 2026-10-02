@@ -13,7 +13,7 @@
   var TX = {
     es: {
       soon: "Esta sección estará disponible muy pronto.",
-      report: "Reportar", close: "Cerrar", step: "Paso", of: "de", back: "Atrás", next: "Siguiente", send: "Enviar reporte", skip: "Saltar",
+      report: "Hacer un reporte", close: "Cerrar", step: "Paso", of: "de", back: "Atrás", next: "Siguiente", send: "Enviar reporte", skip: "Saltar",
       t_loc: "¿Dónde estás?", t_color: "¿De qué color está el agua?", t_surf: "¿Qué ves en la superficie?",
       t_odor: "¿Cómo huele el agua?", t_anom: "¿Observaste algo fuera de lo normal?", t_end: "Cuéntanos más",
       h_loc: "La fecha y la hora se registran solas.", h_color: "Elige el más parecido.", h_multi: "Marca todo lo que observes.",
@@ -43,7 +43,7 @@
     },
     en: {
       soon: "This section will be available very soon.",
-      report: "Report", close: "Close", step: "Step", of: "of", back: "Back", next: "Next", send: "Send report", skip: "Skip",
+      report: "Make a report", close: "Close", step: "Step", of: "of", back: "Back", next: "Next", send: "Send report", skip: "Skip",
       t_loc: "Where are you?", t_color: "What colour is the water?", t_surf: "What do you see on the surface?",
       t_odor: "How does the water smell?", t_anom: "Did you notice anything unusual?", t_end: "Tell us more",
       h_loc: "Date and time are recorded automatically.", h_color: "Pick the closest one.", h_multi: "Tick everything you observe.",
@@ -73,7 +73,7 @@
     },
     fr: {
       soon: "Cette section sera disponible très bientôt.",
-      report: "Signaler", close: "Fermer", step: "Étape", of: "sur", back: "Retour", next: "Suivant", send: "Envoyer le signalement", skip: "Passer",
+      report: "Faire un signalement", close: "Fermer", step: "Étape", of: "sur", back: "Retour", next: "Suivant", send: "Envoyer le signalement", skip: "Passer",
       t_loc: "Où êtes-vous ?", t_color: "De quelle couleur est l'eau ?", t_surf: "Que voyez-vous à la surface ?",
       t_odor: "Quelle odeur a l'eau ?", t_anom: "Avez-vous remarqué quelque chose d'inhabituel ?", t_end: "Dites-nous-en plus",
       h_loc: "La date et l'heure sont enregistrées automatiquement.", h_color: "Choisissez la plus proche.", h_multi: "Cochez tout ce que vous observez.",
