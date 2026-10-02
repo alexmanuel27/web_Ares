@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Comunidad · CubanWaterLab</title>
-<meta name="description" content="El trabajo de CubanWaterLab junto a pescadores y vecinos de la comunidad de Casablanca, en la bahía de La Habana.">
+<title>Moderación · CubanWaterLab</title>
+<meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css?v=30">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
 <div class="cookie-banner" id="cookie-banner" hidden>
@@ -27,7 +28,7 @@
       <li><a href="../index.html">Inicio</a></li>
       <li><a href="../proyecto/index.html">El proyecto</a></li>
       <li><a href="../bitacora/index.html">Bitácora</a></li>
-      <li><a href="../comunidad/index.html" class="active">Comunidad</a></li>
+      <li><a href="../comunidad/index.html">Comunidad</a></li>
       <li><a href="../ciencia-ciudadana/index.html">Ciencia ciudadana</a></li>
       <li><a href="../equipo/index.html">Equipo</a></li>
       <li><a href="../resultados/index.html">Resultados</a></li>
@@ -36,47 +37,13 @@
       <li><a href="../contacto/index.html">Contacto</a></li>
     </ul>
   </nav>
-  <span class="lang-switch"><a href="../comunidad/index.html" class="active">ES</a><a href="../en/comunidad/index.html">EN</a><a href="../fr/comunidad/index.html">FR</a></span>
+  
   <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
 </header>
 
-<section class="comunidad" style="padding-top:4rem;">
+<section style="padding-top:3rem;">
   <div class="wrap">
-    <div class="section-head" data-reveal>
-      <span class="eyebrow">Comunidad</span>
-      <h2>Voces desde la bahía</h2>
-      <p class="lede">El componente de ciencias sociales de CubanWaterLab trabaja junto a la comunidad de Casablanca —pescadores, estudiantes, autoridades locales— para que la tecnología responda a necesidades reales, no solo a preguntas de laboratorio.</p>
-    </div>
-    <div class="comunidad-grid" data-reveal>
-      <img src="../assets/img/pescador-bahia-marzo2025.jpg" alt="Pescador en una balsa artesanal en la bahía de La Habana, con un carguero de fondo, marzo de 2025.">
-      <div class="testimonios">
-        <div class="testimonio">
-          <p>“Es la primera vez que se realiza un proyecto que los involucra directamente.”</p>
-          <cite>Pescadores de la base de pesca recreativa de Casablanca, encuentro abril–junio 2025</cite>
-        </div>
-        <div class="testimonio">
-          <p>“Consideran importante contar con una nueva tecnología que le permita conocer parámetros sobre el agua de la bahía… con relación a la contaminación, plantean la necesidad de saber el grado de contaminación por el petróleo.”</p>
-          <cite>Informe trimestral, abril–junio 2025</cite>
-        </div>
-        <div class="testimonio">
-          <p>“Sugieren poner las boyas cerca de un lugar donde ellos puedan vigilarla.”</p>
-          <cite>Criterios recogidos en el primer encuentro con pescadores</cite>
-        </div>
-      </div>
-    </div>
-
-    <div class="log-figures" data-reveal style="margin-top:3rem;">
-      <figure>
-        <img src="../assets/img/pescadores-casablanca-encuentro.jpg" alt="Primer encuentro del equipo del proyecto con pescadores de la base de pesca recreativa de Casablanca.">
-        <figcaption>Primer encuentro con pescadores de la base de Casablanca, 2025.</figcaption>
-      </figure>
-      <figure>
-        <img src="../assets/img/robotica-la-colina.jpg" alt="Estudiante frente a un monitor con una demostración de medición de calidad de agua potable.">
-        <figcaption>Intercambio con el proyecto de robótica del Centro Sociocultural La Colina.</figcaption>
-      </figure>
-    </div>
-
-    <p class="lede" style="margin-top:3rem;" data-reveal>Con base en el diagnóstico ambiental y cultural de Casablanca (2024) y en 87 encuestas propias, el equipo de ciencias sociales trabaja con dos grupos focales —pescadores acreditados y estudiantes de secundaria— y colabora con el Consejo Popular de la comunidad para diseñar talleres de Mapa Verde y acciones de ciencia ciudadana.</p>
+    <div id="mod-app"></div>
   </div>
 </section>
 
@@ -105,6 +72,10 @@
     </div>
   </div>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="../assets/js/citizen-config.js?v=2"></script>
+<script src="../assets/js/citizen.js?v=8"></script>
+<script src="../assets/js/moderacion.js?v=2"></script>
 <script src="../assets/js/script.js?v=20"></script>
 </body>
 </html>

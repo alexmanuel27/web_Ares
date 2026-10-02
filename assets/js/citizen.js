@@ -105,6 +105,7 @@
   var t = TX[LANG];
 
   var SWATCH = { transparente: "#d6ecee", verde_claro: "#9ccf86", verde_oscuro: "#2f6b3a", amarillo_marron: "#b99a4a", rojo_marron: "#8c4a35", blanco_lechoso: "#ecebe4", otro: "" };
+  window.CS_TX = TX; window.CS_SWATCH = SWATCH;  // reutilizados por moderacion.js
   var STEPS = ["loc", "color", "surf", "odor", "anom", "end"];
 
   // ───────────── Utilidades ─────────────

@@ -1449,3 +1449,26 @@ footer {
 
 .cs-map-section { display: grid; gap: 0.9rem; }
 .cs-map-section[hidden] { display: none; }
+
+/* Moderación */
+.mod-login { display: grid; gap: 0.9rem; max-width: 420px; }
+.mod-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.mod-user { display: flex; align-items: center; gap: 0.8rem; font-size: 0.88rem; color: var(--ink-soft); }
+.mod-tabs { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.mod-tab { font: inherit; font-size: 0.88rem; padding: 0.7rem 0.85rem; min-height: 48px; border-radius: 999px; border: 1.5px solid var(--line-strong); background: var(--bg); color: var(--ink); cursor: pointer; }
+.mod-tab[aria-selected="true"] { background: var(--aqua-bright); border-color: var(--aqua-bright); color: #16233d; font-weight: 600; }
+#mod-map { height: 300px; border-radius: 6px; border: 1px solid var(--line-strong); overflow: hidden; background: var(--bg-soft); margin-bottom: 1.25rem; }
+.mod-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; align-items: start; }
+.mod-card { background: var(--panel); border: 1.5px solid var(--line); border-radius: 8px; padding: 1rem; display: grid; gap: 0.5rem; scroll-margin-top: 6rem; }
+.mod-card.is-selected { border-color: var(--oxide); box-shadow: 0 0 0 2px color-mix(in srgb, var(--oxide) 35%, transparent); }
+.mod-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+.mod-head .cs-link { margin-left: auto; }
+.mod-row { font-size: 0.92rem; color: var(--ink-soft); }
+.mod-row em { color: var(--ink); font-style: normal; font-weight: 500; }
+.mod-comment { margin: 0; padding: 0.5rem 0.8rem; border-left: 3px solid var(--aqua-bright); background: var(--bg); font-size: 0.95rem; overflow-wrap: anywhere; }
+.mod-photo { width: 100%; max-height: 240px; object-fit: cover; border-radius: 6px; }
+.mod-private { color: var(--oxide); }
+.mod-coords { font-family: var(--font-mono); font-size: 0.72rem; color: var(--ink-faint); }
+.mod-actions { display: flex; gap: 0.6rem; margin-top: 0.3rem; }
+.mod-actions .cs-btn { flex: 1; }
+@media (max-width: 640px) { .mod-list { grid-template-columns: 1fr; } #mod-map { height: 260px; } }
