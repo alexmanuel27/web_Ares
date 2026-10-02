@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ciencia ciudadana · CubanWaterLab</title>
+<meta name="description" content="Reporta lo que ves en la bahía: color del agua, olor, residuos y anomalías. Ciencia ciudadana de CubanWaterLab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css?v=21">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <p>Usamos Google Analytics para entender cómo se usa este sitio web. ¿Aceptas las cookies de análisis?</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-ghost" id="cookie-decline" type="button">Rechazar</button>
+    <button class="cookie-btn cookie-btn-primary" id="cookie-accept" type="button">Aceptar</button>
+  </div>
+</div>
+<header class="topbar">
+  <a class="brand" href="../index.html"><img src="../assets/img/Gemini_Generated_Image_n0yian0yian0yian-removebg-preview.png" alt="Logo CubanWaterLab" class="brand-logo"><span>CubanWaterLab</span></a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="../index.html">Inicio</a></li>
+      <li><a href="../proyecto/index.html">El proyecto</a></li>
+      <li><a href="../bitacora/index.html">Bitácora</a></li>
+      <li><a href="../comunidad/index.html">Comunidad</a></li>
+      <li><a href="../equipo/index.html">Equipo</a></li>
+      <li><a href="../resultados/index.html">Resultados</a></li>
+      <li><a href="../gallery/index.html">Galería</a></li>
+      <li><a href="../reports/index.html" class="active">Informes</a></li>
+      <li><a href="../contacto/index.html">Contacto</a></li>
+    </ul>
+  </nav>
+  <span class="lang-switch"><a href="../ciencia-ciudadana/index.html" class="active">ES</a><a href="../en/citizen-science/index.html">EN</a><a href="../fr/science-citoyenne/index.html">FR</a></span>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+</header>
+
+<section style="padding-top:4rem;">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Ciencia ciudadana</span>
+      <h2>Cuéntanos cómo está la bahía</h2>
+      <p class="lede">Si vives, pescas o trabajas junto a la bahía, tus ojos son un instrumento más. En menos de un minuto puedes reportar el color del agua, el olor o cualquier cosa extraña. No hace falta crear una cuenta.</p>
+    </div>
+    <div class="cs-intro"><div><strong>Rápido</strong>Cinco preguntas y, si quieres, una foto. Con el celular en una mano.</div><div><strong>Funciona sin señal</strong>Si no tienes internet, el reporte se guarda en tu teléfono y se envía solo cuando vuelva.</div><div><strong>Con revisión</strong>Nuestro equipo revisa cada reporte antes de publicarlo en el mapa.</div></div>
+    <div id="cs-app"></div>
+    <div class="cs-public" id="cs-map-section">
+      <div class="section-head">
+        <h3 style="font-size:1.6rem;">Lo que se ha reportado</h3>
+        <p class="lede">Reportes revisados por el equipo. Toca un punto para ver los detalles.</p>
+      </div>
+      <div id="cs-public-map"></div>
+      <p class="cs-note" id="cs-map-note"></p>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">CubanWaterLab</div>
+        <p style="margin-top:0.8rem; max-width: 34ch;">Monitoreo in situ de la calidad del agua en bahías cubanas: creando y promocionando el uso de herramientas científicas.</p>
+      </div>
+      <div>
+        <h4>Instituciones líderes</h4>
+        <p>Universidad de La Habana</p>
+        <p>Université Libre de Bruxelles</p>
+      </div>
+      <div>
+        <h4>Coordinación</h4>
+        <p>Dr. C. Ernesto Altshuler Álvarez — UH</p>
+        <p>Dr. Denis Terwagne — ULB</p>
+      </div>
+    </div>
+    <p class="funding-note">Con el apoyo financiero de <a href="https://www.ares-ac.be/en" target="_blank" rel="noopener">ARES</a> — Académie de Recherche et d'Enseignement Supérieur (Bélgica), la federación que impulsa esta cooperación universitaria al desarrollo.</p>
+    <div class="footer-bottom">
+      <span>CubanWaterLab · <span id="year">2026</span> · Bahía de La Habana</span>
+      <span>Sitio en construcción</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="../assets/js/citizen-config.js?v=1"></script>
+<script src="../assets/js/citizen.js?v=1"></script>
+<script src="../assets/js/script.js?v=20"></script>
+</body>
+</html>

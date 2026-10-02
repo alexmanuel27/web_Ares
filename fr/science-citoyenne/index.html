@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Science citoyenne · CubanWaterLab</title>
+<meta name="description" content="Signalez ce que vous voyez dans la baie : couleur de l'eau, odeur, déchets et anomalies. Science citoyenne de CubanWaterLab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css?v=21">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+</head>
+<body>
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <p>Nous utilisons Google Analytics pour comprendre comment ce site est utilisé. Acceptez-vous les cookies d'analyse ?</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-ghost" id="cookie-decline" type="button">Refuser</button>
+    <button class="cookie-btn cookie-btn-primary" id="cookie-accept" type="button">Accepter</button>
+  </div>
+</div>
+<header class="topbar">
+  <a class="brand" href="../../fr/index.html"><img src="../../assets/img/Gemini_Generated_Image_n0yian0yian0yian-removebg-preview.png" alt="Logo CubanWaterLab" class="brand-logo"><span>CubanWaterLab</span></a>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="../../fr/index.html">Accueil</a></li>
+      <li><a href="../../fr/proyecto/index.html">Le projet</a></li>
+      <li><a href="../../fr/bitacora/index.html">Journal</a></li>
+      <li><a href="../../fr/comunidad/index.html">Communauté</a></li>
+      <li><a href="../../fr/equipo/index.html">Équipe</a></li>
+      <li><a href="../../fr/resultados/index.html">Résultats</a></li>
+      <li><a href="../../fr/gallery/index.html">Galerie</a></li>
+      <li><a href="../../fr/reports/index.html" class="active">Rapports</a></li>
+      <li><a href="../../fr/contacto/index.html">Contact</a></li>
+    </ul>
+  </nav>
+  <span class="lang-switch"><a href="../../ciencia-ciudadana/index.html">ES</a><a href="../../en/citizen-science/index.html">EN</a><a href="../../fr/science-citoyenne/index.html" class="active">FR</a></span>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+</header>
+
+<section style="padding-top:4rem;">
+  <div class="wrap">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Science citoyenne</span>
+      <h2>Dites-nous comment va la baie</h2>
+      <p class="lede">Si vous vivez, pêchez ou travaillez au bord de la baie, vos yeux sont un instrument de plus. En moins d'une minute, vous pouvez signaler la couleur de l'eau, l'odeur ou tout ce qui semble étrange. Aucun compte n'est nécessaire.</p>
+    </div>
+    <div class="cs-intro"><div><strong>Rapide</strong>Cinq questions et, si vous le souhaitez, une photo. D'une seule main.</div><div><strong>Fonctionne sans réseau</strong>Sans internet, le signalement est enregistré sur votre téléphone et envoyé automatiquement au retour de la connexion.</div><div><strong>Vérifié</strong>Notre équipe vérifie chaque signalement avant de le publier sur la carte.</div></div>
+    <div id="cs-app"></div>
+    <div class="cs-public" id="cs-map-section">
+      <div class="section-head">
+        <h3 style="font-size:1.6rem;">Ce qui a été signalé</h3>
+        <p class="lede">Signalements vérifiés par l'équipe. Touchez un point pour voir les détails.</p>
+      </div>
+      <div id="cs-public-map"></div>
+      <p class="cs-note" id="cs-map-note"></p>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">CubanWaterLab</div>
+        <p style="margin-top:0.8rem; max-width: 34ch;">Suivi in situ de la qualité de l'eau dans les baies cubaines : créer et promouvoir l'usage d'outils scientifiques.</p>
+      </div>
+      <div>
+        <h4>Institutions responsables</h4>
+        <p>Universidad de La Habana</p>
+        <p>Université Libre de Bruxelles</p>
+      </div>
+      <div>
+        <h4>Coordination</h4>
+        <p>Dr. C. Ernesto Altshuler Álvarez — UH</p>
+        <p>Dr. Denis Terwagne — ULB</p>
+      </div>
+    </div>
+    <p class="funding-note">Avec le soutien financier de l'<a href="https://www.ares-ac.be/en" target="_blank" rel="noopener">ARES</a> — Académie de Recherche et d'Enseignement Supérieur (Belgique), la fédération qui porte cette coopération universitaire au développement.</p>
+    <div class="footer-bottom">
+      <span>CubanWaterLab · <span id="year">2026</span> · Baie de La Havane</span>
+      <span>Site en construction</span>
+    </div>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="../../assets/js/citizen-config.js?v=1"></script>
+<script src="../../assets/js/citizen.js?v=1"></script>
+<script src="../../assets/js/script.js?v=20"></script>
+</body>
+</html>
