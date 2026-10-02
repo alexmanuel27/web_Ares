@@ -1190,7 +1190,7 @@ section { padding: 5.5rem 0; }
   color: var(--ink-faint);
 }
 .report-title { color: var(--ink); font-weight: 500; }
-.report-action { justify-self: end; text-align: right; display: flex; flex-direction: column; gap: 0.3rem; align-items: flex-end; }
+.report-action { justify-self: end; text-align: right; }
 .report-pending {
   color: var(--ink-faint);
   font-size: 0.85rem;
@@ -1348,5 +1348,5 @@ footer {
   .footer-grid { grid-template-columns: 1fr; }
   .resultado { grid-template-columns: 1fr; }
   .report-row { grid-template-columns: 1fr; gap: 0.4rem; }
-  .report-action { justify-self: start; text-align: left; align-items: flex-start; }
+  .report-action { justify-self: start; text-align: left; }
 }
