@@ -128,7 +128,7 @@
   function loadQueue() { try { return JSON.parse(localStorage.getItem(QUEUE_KEY) || "[]"); } catch (e) { return []; } }
   function saveQueue(q) { try { localStorage.setItem(QUEUE_KEY, JSON.stringify(q)); return true; } catch (e) { return false; } }
   function api(path, opts) {
-    opts.headers = Object.assign({ apikey: C.key, Authorization: "Bearer " + C.key }, opts.headers || {});
+    opts.headers = Object.assign({ apikey: C.key }, /^eyJ/.test(C.key) ? { Authorization: "Bearer " + C.key } : {}, opts.headers || {});  // las claves sb_publishable_ no son JWT
     return fetch(C.url + path, opts);
   }
 

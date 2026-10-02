@@ -1319,7 +1319,7 @@ footer {
   .log-date { font-size: 0.68rem; }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1240px) {
   .nav-links { display: none; }
   .nav-toggle { display: block; }
   .topbar.open .nav-links {
