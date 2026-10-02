@@ -1437,3 +1437,6 @@ footer {
   .cs-dialog { width: 100%; max-width: none; height: 100vh; height: 100dvh; max-height: none; border-radius: 0; }
   .cs-dialog .cs-card { padding: 3.4rem 1.1rem 1.2rem; }
 }
+
+.cs-fishing-more { display: grid; gap: 0.7rem; }
+.cs-fishing-more[hidden] { display: none; }

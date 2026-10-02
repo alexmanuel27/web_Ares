@@ -297,21 +297,29 @@
         photoNote.appendChild(el("button", { type: "button", class: "cs-link", text: t.photo_rm, onclick: function () { state.photo = null; photoIn.value = ""; photoNote.textContent = ""; } }));
       }, function () { photoIn.value = ""; });
     });
-    function yn(prop) {
+    var more = el("div", { class: "cs-fishing-more", hidden: "" });
+    function buildMore() {  // captura y profundidad solo tienen sentido si está pescando; se reinician al cambiar la respuesta
+      state.catch_ = ""; state.depth = ""; more.textContent = "";
+      more.hidden = state.fishing !== true;
+      more.appendChild(el("p", { class: "cs-label", text: t.catch_ }));
+      more.appendChild(single(["mas", "normal", "menos"], t.catches, "catch_", false, false));
+      more.appendChild(el("p", { class: "cs-label", text: t.depth }));
+      more.appendChild(single(["somera", "media", "profunda"], t.depths, "depth", false, false));
+    }
+    function fishingYN() {
       var w = el("div", { class: "cs-grid cs-grid-3" });
       function draw() {
         w.textContent = "";
         [[true, t.yes], [false, t.no]].forEach(function (o) {
-          w.appendChild(tile(o[1], state[prop] === o[0], function () { state[prop] = state[prop] === o[0] ? null : o[0]; draw(); }));
+          w.appendChild(tile(o[1], state.fishing === o[0], function () { state.fishing = state.fishing === o[0] ? null : o[0]; draw(); buildMore(); }));
         });
       }
       draw(); return w;
     }
+    buildMore();
     var details = el("details", { class: "cs-details" }, [
       el("summary", { text: t.more }),
-      el("p", { class: "cs-label", text: t.fishing }), yn("fishing"),
-      el("p", { class: "cs-label", text: t.catch_ }), single(["mas", "normal", "menos"], t.catches, "catch_", false, false),
-      el("p", { class: "cs-label", text: t.depth }), single(["somera", "media", "profunda"], t.depths, "depth", false, false)
+      el("p", { class: "cs-label", text: t.fishing }), fishingYN(), more
     ]);
     var nameIn = el("input", { type: "text", class: "cs-input", maxlength: "80", placeholder: t.name, "aria-label": t.name, autocomplete: "nickname" });
     var contactIn = el("input", { type: "text", class: "cs-input", maxlength: "120", placeholder: t.contact, "aria-label": t.contact });
