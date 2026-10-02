@@ -1440,3 +1440,9 @@ footer {
 
 .cs-fishing-more { display: grid; gap: 0.7rem; }
 .cs-fishing-more[hidden] { display: none; }
+
+.cs-map-wrap { position: relative; }
+.cs-reticle { position: absolute; left: 50%; top: 50%; width: 34px; height: 34px; margin: -17px 0 0 -17px; z-index: 1000; pointer-events: none; }
+.cs-reticle::before, .cs-reticle::after { content: ""; position: absolute; background: #16233d; box-shadow: 0 0 0 2px rgba(255,255,255,0.9); border-radius: 1px; }
+.cs-reticle::before { left: 50%; top: 0; width: 2px; height: 100%; margin-left: -1px; }
+.cs-reticle::after { top: 50%; left: 0; height: 2px; width: 100%; margin-top: -1px; }
