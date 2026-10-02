@@ -18,7 +18,7 @@
       t_odor: "¿Cómo huele el agua?", t_anom: "¿Observaste algo fuera de lo normal?", t_end: "Cuéntanos más",
       h_loc: "La fecha y la hora se registran solas.", h_color: "Elige el más parecido.", h_multi: "Marca todo lo que observes.",
       loc_btn: "Usar mi ubicación", loc_wait: "Buscando señal GPS…", loc_ok: "Ubicación lista", loc_acc: "precisión aprox.",
-      loc_pin: "Poner pin aquí", loc_tap: "O mueve el mapa hasta el lugar exacto y pulsa «Poner pin aquí».", loc_err: "No pude obtener el GPS. Mueve el mapa hasta el lugar y pulsa «Poner pin aquí».",
+      loc_mapbtn: "Marcar en el mapa", loc_pin: "Poner pin aquí", loc_tap: "Mueve el mapa hasta el lugar exacto y pulsa «Poner pin aquí».", loc_err: "No pude obtener el GPS. Mueve el mapa hasta el lugar y pulsa «Poner pin aquí».",
       loc_need: "Marca la ubicación para continuar.",
       comment: "¿Algo te pareció fuera de lo normal? ¿En qué se diferencia el agua de hoy de lo habitual?",
       photo: "Añadir foto (opcional)", photo_ok: "Foto lista", photo_rm: "Quitar foto",
@@ -48,7 +48,7 @@
       t_odor: "How does the water smell?", t_anom: "Did you notice anything unusual?", t_end: "Tell us more",
       h_loc: "Date and time are recorded automatically.", h_color: "Pick the closest one.", h_multi: "Tick everything you observe.",
       loc_btn: "Use my location", loc_wait: "Looking for a GPS signal…", loc_ok: "Location ready", loc_acc: "approx. accuracy",
-      loc_pin: "Drop pin here", loc_tap: "Or move the map to the exact spot and press “Drop pin here”.", loc_err: "Couldn't get the GPS. Move the map to the spot and press “Drop pin here”.",
+      loc_mapbtn: "Mark on the map", loc_pin: "Drop pin here", loc_tap: "Move the map to the exact spot and press “Drop pin here”.", loc_err: "Couldn't get the GPS. Move the map to the spot and press “Drop pin here”.",
       loc_need: "Mark the location to continue.",
       comment: "Did anything look unusual? How is today's water different from usual?",
       photo: "Add a photo (optional)", photo_ok: "Photo ready", photo_rm: "Remove photo",
@@ -78,7 +78,7 @@
       t_odor: "Quelle odeur a l'eau ?", t_anom: "Avez-vous remarqué quelque chose d'inhabituel ?", t_end: "Dites-nous-en plus",
       h_loc: "La date et l'heure sont enregistrées automatiquement.", h_color: "Choisissez la plus proche.", h_multi: "Cochez tout ce que vous observez.",
       loc_btn: "Utiliser ma position", loc_wait: "Recherche du signal GPS…", loc_ok: "Position prête", loc_acc: "précision approx.",
-      loc_pin: "Placer le repère ici", loc_tap: "Ou déplacez la carte jusqu'à l'endroit exact et appuyez sur « Placer le repère ici ».", loc_err: "Impossible d'obtenir le GPS. Déplacez la carte jusqu'à l'endroit et appuyez sur « Placer le repère ici ».",
+      loc_mapbtn: "Marquer sur la carte", loc_pin: "Placer le repère ici", loc_tap: "Déplacez la carte jusqu'à l'endroit exact et appuyez sur « Placer le repère ici ».", loc_err: "Impossible d'obtenir le GPS. Déplacez la carte jusqu'à l'endroit et appuyez sur « Placer le repère ici ».",
       loc_need: "Indiquez la position pour continuer.",
       comment: "Quelque chose vous a semblé inhabituel ? En quoi l'eau d'aujourd'hui diffère-t-elle de l'habitude ?",
       photo: "Ajouter une photo (facultatif)", photo_ok: "Photo prête", photo_rm: "Retirer la photo",
@@ -266,20 +266,27 @@
       }
     }
     function locate() {
-      if (!navigator.geolocation) { locStatus.textContent = t.loc_err; return; }
+      if (!navigator.geolocation) { locStatus.textContent = t.loc_err; showMap(); return; }
       locStatus.textContent = t.loc_wait; locStatus.className = "cs-loc-status";
       navigator.geolocation.getCurrentPosition(function (p) {
         setPoint(p.coords.latitude, p.coords.longitude, p.coords.accuracy, true);
-      }, function () { locStatus.textContent = t.loc_err; locStatus.className = "cs-loc-status is-err"; },
+      }, function () { locStatus.textContent = t.loc_err; locStatus.className = "cs-loc-status is-err"; showMap(); },
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 30000 });
     }
+    var mapShown = false;
+    function showMap() {
+      mapSection.hidden = false; mapShown = true; initPick();
+      setTimeout(function () { if (map) { map.invalidateSize(); } if (mapSection.scrollIntoView) { mapSection.scrollIntoView({ block: "nearest", behavior: "smooth" }); } }, 60);
+    }
     var locBtn = el("button", { type: "button", class: "cs-btn cs-btn-primary cs-btn-big", text: t.loc_btn, onclick: locate });
+    var mapBtn = el("button", { type: "button", class: "cs-btn cs-btn-ghost cs-btn-big", text: t.loc_mapbtn, onclick: showMap });
     var pinBtn = el("button", { type: "button", class: "cs-btn cs-btn-ghost cs-btn-big", text: t.loc_pin, onclick: function () {
       if (!map) { return; }
       var c = map.getCenter(); setPoint(c.lat, c.lng, null, false);
     } });
     var mapWrap = el("div", { class: "cs-map-wrap" }, [mapBox, el("div", { class: "cs-reticle", "aria-hidden": "true" })]);
-    panes.loc = el("div", {}, [locBtn, locStatus, el("p", { class: "cs-hint", text: t.loc_tap }), mapWrap, pinBtn]);
+    var mapSection = el("div", { class: "cs-map-section", hidden: "" }, [el("p", { class: "cs-hint", text: t.loc_tap }), mapWrap, pinBtn]);
+    panes.loc = el("div", {}, [locBtn, mapBtn, locStatus, mapSection]);
 
     panes.color = single(["transparente", "verde_claro", "verde_oscuro", "amarillo_marron", "rojo_marron", "blanco_lechoso", "otro"], t.colors, "color", true, true);
     panes.surf = multi(["ninguna", "algas", "espuma", "aceite", "basura", "objetos"], t.surface, "surface");
@@ -344,7 +351,7 @@
       backBtn.style.visibility = i === 0 ? "hidden" : "visible";
       nextBtn.textContent = i === STEPS.length - 1 ? t.send : t.next;
       nextBtn.onclick = i === STEPS.length - 1 ? submit : function () { go(cur + 1); };
-      if (k === "loc") { initPick(); }
+      if (k === "loc" && mapShown) { initPick(); if (map) { map.invalidateSize(); } }
       if (i > 0 && dlg) { dlg.scrollTop = 0; }
     }
     function initPick() {
