@@ -13,7 +13,7 @@
   var TX = {
     es: {
       soon: "Esta sección estará disponible muy pronto.",
-      step: "Paso", of: "de", back: "Atrás", next: "Siguiente", send: "Enviar reporte", skip: "Saltar",
+      report: "Reportar", close: "Cerrar", step: "Paso", of: "de", back: "Atrás", next: "Siguiente", send: "Enviar reporte", skip: "Saltar",
       t_loc: "¿Dónde estás?", t_color: "¿De qué color está el agua?", t_surf: "¿Qué ves en la superficie?",
       t_odor: "¿Cómo huele el agua?", t_anom: "¿Observaste algo fuera de lo normal?", t_end: "Cuéntanos más",
       h_loc: "La fecha y la hora se registran solas.", h_color: "Elige el más parecido.", h_multi: "Marca todo lo que observes.",
@@ -43,7 +43,7 @@
     },
     en: {
       soon: "This section will be available very soon.",
-      step: "Step", of: "of", back: "Back", next: "Next", send: "Send report", skip: "Skip",
+      report: "Report", close: "Close", step: "Step", of: "of", back: "Back", next: "Next", send: "Send report", skip: "Skip",
       t_loc: "Where are you?", t_color: "What colour is the water?", t_surf: "What do you see on the surface?",
       t_odor: "How does the water smell?", t_anom: "Did you notice anything unusual?", t_end: "Tell us more",
       h_loc: "Date and time are recorded automatically.", h_color: "Pick the closest one.", h_multi: "Tick everything you observe.",
@@ -73,7 +73,7 @@
     },
     fr: {
       soon: "Cette section sera disponible très bientôt.",
-      step: "Étape", of: "sur", back: "Retour", next: "Suivant", send: "Envoyer le signalement", skip: "Passer",
+      report: "Signaler", close: "Fermer", step: "Étape", of: "sur", back: "Retour", next: "Suivant", send: "Envoyer le signalement", skip: "Passer",
       t_loc: "Où êtes-vous ?", t_color: "De quelle couleur est l'eau ?", t_surf: "Que voyez-vous à la surface ?",
       t_odor: "Quelle odeur a l'eau ?", t_anom: "Avez-vous remarqué quelque chose d'inhabituel ?", t_end: "Dites-nous-en plus",
       h_loc: "La date et l'heure sont enregistrées automatiquement.", h_color: "Choisissez la plus proche.", h_multi: "Cochez tout ce que vous observez.",
@@ -191,6 +191,7 @@
 
   // ───────────── Formulario por pasos ─────────────
   function initForm(root) {
+    var form = {};
     var state = { lat: null, lon: null, acc: null, color: "", surface: [], odor: "", anomalies: [], photo: null, fishing: null, catch_: "", depth: "" };
     var cur = 0;
     var map, marker;
@@ -332,7 +333,7 @@
       nextBtn.textContent = i === STEPS.length - 1 ? t.send : t.next;
       nextBtn.onclick = i === STEPS.length - 1 ? submit : function () { go(cur + 1); };
       if (k === "loc") { initPick(); }
-      if (card.scrollIntoView && i > 0) { card.scrollIntoView({ block: "start", behavior: "smooth" }); }
+      if (i > 0 && dlg) { dlg.scrollTop = 0; }
     }
     function initPick() {
       if (map || !window.L) { return; }
@@ -368,25 +369,30 @@
       });
     }
     function done(kind, testMode) {
+      finished = true;
       root.textContent = "";
       var l1 = kind === "sent" ? t.sent : t.saved, l2 = kind === "sent" ? t.sent2 : t.saved2;
       root.appendChild(el("div", { class: "cs-card cs-done" }, [
         el("h3", { class: "cs-title", text: l1 }), el("p", { text: testMode ? t.test : l2 }),
-        el("button", { type: "button", class: "cs-btn cs-btn-primary", text: t.again, onclick: function () { root.textContent = ""; initForm(root); } })
+        el("button", { type: "button", class: "cs-btn cs-btn-primary", text: t.again, onclick: function () { finished = false; root.textContent = ""; current = initForm(root); } }),
+        el("button", { type: "button", class: "cs-btn cs-btn-ghost", text: t.close, onclick: closeDlg })
       ]));
       refreshPending();
       if (kind === "sent") { loadPublicMap(); }
     }
 
     go(0);
+    form.refresh = function () { if (map) { map.invalidateSize(); } };
     // Si el permiso de ubicación ya fue concedido, se localiza sin pedir un toque más
     if (navigator.permissions && navigator.permissions.query) {
       navigator.permissions.query({ name: "geolocation" }).then(function (p) { if (p.state === "granted") { locate(); } }, function () {});
     }
+    return form;
   }
 
   // ───────────── Aviso de reportes pendientes ─────────────
-  var pendingBox;
+  var pendingBox, dlg, current, finished = false;
+  function closeDlg() { if (dlg.close) { dlg.close(); } else { dlg.removeAttribute("open"); } document.documentElement.classList.remove("cs-lock"); }
   function refreshPending() {
     if (!pendingBox) { return; }
     var n = loadQueue().length;
@@ -439,17 +445,35 @@
   }
 
   // ───────────── Arranque ─────────────
-  var root = document.getElementById("cs-app");
-  if (!root) { return; }
+  var cta = document.getElementById("cs-cta");
+  if (!cta) { return; }
   if (!LIVE && !PREVIEW) {
-    root.appendChild(el("div", { class: "cs-card cs-done" }, [el("h3", { class: "cs-title", text: t.soon })]));
+    cta.appendChild(el("div", { class: "cs-card cs-done" }, [el("h3", { class: "cs-title", text: t.soon })]));
     var mapSec = document.getElementById("cs-map-section"); if (mapSec) { mapSec.hidden = true; }
     return;
   }
   pendingBox = el("p", { class: "cs-pending", hidden: "" });
-  root.parentNode.insertBefore(pendingBox, root);
-  if (!LIVE) { root.parentNode.insertBefore(el("p", { class: "cs-pending", text: t.test }), root); }
-  initForm(root);
+  cta.appendChild(pendingBox);
+  if (!LIVE) { cta.appendChild(el("p", { class: "cs-pending", text: t.test })); }
+
+  var root = el("div", { id: "cs-app" });
+  dlg = el("dialog", { class: "cs-dialog", "aria-label": t.report });
+  dlg.appendChild(el("button", { type: "button", class: "cs-close", "aria-label": t.close, text: "×", onclick: closeDlg }));
+  dlg.appendChild(root);
+  dlg.addEventListener("close", function () { document.documentElement.classList.remove("cs-lock"); });
+  document.body.appendChild(dlg);
+  cta.appendChild(el("button", {
+    type: "button", class: "cs-btn cs-btn-primary cs-btn-big cs-open", text: t.report,
+    onclick: function () {
+      if (finished) { finished = false; root.textContent = ""; current = null; }
+      if (dlg.showModal) { dlg.showModal(); } else { dlg.setAttribute("open", ""); }
+      document.documentElement.classList.add("cs-lock");
+      dlg.scrollTop = 0;
+      if (!current) { current = initForm(root); }
+      setTimeout(function () { current.refresh(); }, 60);
+    }
+  }));
+
   refreshPending();
   loadPublicMap();
   window.addEventListener("online", function () { flush().then(refreshPending); });

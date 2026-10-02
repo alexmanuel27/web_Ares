@@ -1352,9 +1352,6 @@ footer {
 }
 
 /* ---------------- Ciencia ciudadana ---------------- */
-.cs-intro { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin: 2rem 0 2.5rem; }
-.cs-intro div { border-top: 2px solid var(--aqua-bright); padding-top: 0.8rem; color: var(--ink-soft); font-size: 0.95rem; }
-.cs-intro strong { display: block; font-family: var(--font-display); color: var(--ink); font-size: 1.1rem; margin-bottom: 0.2rem; }
 .cs-card { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 1.5rem; box-shadow: var(--shadow); max-width: 680px; margin: 0 auto; scroll-margin-top: 5rem; }
 .cs-done { text-align: center; display: grid; gap: 1rem; justify-items: center; }
 .cs-progress { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faint); }
@@ -1405,17 +1402,38 @@ footer {
 .cs-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .cs-pending { max-width: 680px; margin: 0 auto 1rem; padding: 0.7rem 1rem; border-radius: 6px; background: color-mix(in srgb, var(--aqua-bright) 20%, var(--panel)); border: 1px solid var(--aqua-bright); font-size: 0.92rem; }
 .cs-pending[hidden] { display: none; }
-.cs-public { margin-top: 4rem; }
+.cs-public { margin-top: 2rem; }
 #cs-public-map { height: 460px; border-radius: 6px; border: 1px solid var(--line-strong); overflow: hidden; margin-top: 1.25rem; background: var(--bg-soft); }
 .cs-note { color: var(--ink-faint); font-size: 0.9rem; margin-top: 0.6rem; min-height: 1.3em; }
 .cs-pop { font-size: 0.88rem; line-height: 1.4; max-width: 240px; }
 .cs-pop strong { display: block; margin-bottom: 0.3rem; }
 .cs-pop-img { margin-top: 0.4rem; width: 100%; max-height: 150px; object-fit: cover; border-radius: 4px; }
 @media (max-width: 640px) {
-  .cs-intro { grid-template-columns: 1fr; gap: 0.9rem; margin: 1.5rem 0 2rem; }
   .cs-card { padding: 1.1rem; }
   .cs-grid { grid-template-columns: 1fr; }
   .cs-grid-colors, .cs-grid-3 { grid-template-columns: 1fr 1fr; }
-  #cs-public-map { height: 360px; }
+  #cs-public-map { height: 58vh; min-height: 320px; max-height: 520px; }
 }
 @media (prefers-reduced-motion: reduce) { .cs-bar span, .cs-tile { transition: none; } }
+
+/* Ciencia ciudadana: botón + ventana flotante */
+.cs-caption { color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.7rem; }
+#cs-cta { margin-top: 1.25rem; }
+.cs-open { display: flex; width: 100%; max-width: 680px; margin: 0 auto; }
+.cs-lock { overflow: hidden; }
+.cs-dialog {
+  position: fixed; inset: 0; margin: auto; padding: 0; border: 0; color: var(--ink); background: var(--panel);
+  width: min(680px, 100%); max-height: 92vh; overflow-y: auto; border-radius: 10px; box-shadow: 0 30px 80px -20px rgba(0,0,0,0.6);
+}
+.cs-dialog:not([open]) { display: none; }
+.cs-dialog::backdrop { background: rgba(10, 21, 38, 0.7); }
+.cs-dialog .cs-card { border: 0; box-shadow: none; max-width: none; margin: 0; padding: 3.4rem 1.4rem 1.4rem; }
+.cs-close {
+  position: absolute; top: 0.6rem; right: 0.6rem; z-index: 2; width: 48px; height: 48px; border-radius: 50%;
+  font-size: 1.9rem; line-height: 1; color: var(--ink); background: var(--bg); border: 1px solid var(--line-strong); cursor: pointer;
+}
+.cs-close:focus-visible { outline: 3px solid var(--aqua-bright); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .cs-dialog { width: 100%; max-width: none; height: 100vh; height: 100dvh; max-height: none; border-radius: 0; }
+  .cs-dialog .cs-card { padding: 3.4rem 1.1rem 1.2rem; }
+}
