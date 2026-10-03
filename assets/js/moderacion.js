@@ -83,7 +83,10 @@
     }));
   }
   function fetchRows() {
-    return db("/rest/v1/reports?select=*&status=eq." + tab + "&order=observed_at.desc&limit=200").then(function (r) { return r.json(); }).then(function (j) { rows = Array.isArray(j) ? j : []; });
+    var base = "/rest/v1/reports?status=eq." + tab + "&order=observed_at.desc&limit=200&select=";
+    // con autor (requiere accounts.sql); si todavía no existe la relación, se pide sin autor
+    return db(base + "*,profiles(nickname)").then(function (r) { return r.ok ? r : db(base + "*"); })
+      .then(function (r) { return r.json(); }).then(function (j) { rows = Array.isArray(j) ? j : []; });
   }
   function refreshAll() { return Promise.all([fetchCounts(), fetchRows()]).then(render); }
 
@@ -197,6 +200,7 @@
       details.length ? el("p", { class: "mod-row", text: details.join(" · ") }) : null,
       photo ? el("a", { href: photo, target: "_blank", rel: "noopener" }, [el("img", { src: photo, alt: "Foto del reporte", class: "mod-photo", loading: "lazy" })]) : null,
       (r.name || r.contact) ? el("p", { class: "mod-row mod-private", text: "Privado — " + [r.name, r.contact].filter(Boolean).join(" · ") }) : null,
+      el("p", { class: "mod-row", text: r.profiles && r.profiles.nickname ? "Autor: @" + r.profiles.nickname : (r.user_id ? "Autor: cuenta" : "Anónimo") }),
       el("p", { class: "mod-coords", text: r.lat.toFixed(5) + ", " + r.lon.toFixed(5) + " · " + (r.lang || "").toUpperCase() }),
       el("div", { class: "mod-actions" }, btns)
     ]);
