@@ -1472,3 +1472,14 @@ footer {
 .mod-actions { display: flex; gap: 0.6rem; margin-top: 0.3rem; }
 .mod-actions .cs-btn { flex: 1; }
 @media (max-width: 640px) { .mod-list { grid-template-columns: 1fr; } #mod-map { height: 260px; } }
+
+/* Enlace destacado "Ciencia ciudadana" en el menú */
+.nav-links a.nav-cta { background: var(--aqua-bright); color: #16233d; padding: 0.4rem 0.9rem; border-radius: 999px; border-bottom-color: transparent; font-weight: 500; transition: filter 0.2s, transform 0.2s; }
+.nav-links a.nav-cta:hover, .nav-links a.nav-cta:focus-visible { filter: brightness(1.07); color: #16233d; transform: translateY(-1px); }
+.nav-links a.nav-cta::after { display: none; }
+.nav-links a.nav-cta.active { box-shadow: 0 0 0 2px var(--panel), 0 0 0 4px var(--aqua-bright); }
+@media (max-width: 1240px) { .nav-links a.nav-cta { align-self: flex-start; } }
+.mod-flags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mod-badge { font-size: 0.78rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: var(--bg-soft); color: var(--ink-soft); border: 1px solid var(--line); }
+.mod-night { background: var(--teal-deep); color: #fff; border-color: transparent; }
+.mod-warn { background: color-mix(in srgb, var(--oxide) 16%, var(--panel)); color: var(--oxide); border-color: var(--oxide); }

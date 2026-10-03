@@ -170,6 +170,15 @@
     if (r.fishing_now != null) { details.push(r.fishing_now ? "Pescando ahora" : "No está pescando"); }
     if (r.catch_vs_normal) { details.push("Captura: " + T.catches[r.catch_vs_normal].toLowerCase()); }
     if (r.depth) { details.push("Profundidad: " + T.depths[r.depth].toLowerCase()); }
+    // Confiabilidad por hora local (Cuba): de noche no se aprecian el color ni el comportamiento de los peces
+    var when = new Date(r.observed_at), hh = when.toLocaleTimeString("es", { timeZone: "America/Havana", hour: "2-digit", minute: "2-digit", hour12: false });
+    var hour = parseInt(hh, 10), night = hour >= 20 || hour < 6;
+    var visual = r.color || (r.anomalies || []).some(function (k) { return k === "peces_raros" || k === "cambio_color" || k === "peces_muertos"; });
+    var lateMin = r.created_at ? Math.round((new Date(r.created_at) - when) / 60000) : 0;
+    var flags = [];
+    if (night) { flags.push(el("span", { class: "mod-badge mod-night", text: "Nocturno · " + hh })); }
+    if (night && visual) { flags.push(el("span", { class: "mod-badge mod-warn", text: "Observación visual de noche: revisar con cuidado" })); }
+    if (lateMin > 15) { flags.push(el("span", { class: "mod-badge", text: "Enviado " + (lateMin >= 120 ? Math.round(lateMin / 60) + " h" : lateMin + " min") + " después (sin conexión)" })); }
     var btns = [];
     function b(label, cls, status) { var x = el("button", { type: "button", class: "cs-btn " + cls, text: label }); x.addEventListener("click", function (e) { e.stopPropagation(); if (status === "delete" && !confirm("¿Eliminar este reporte definitivamente?")) { return; } act(r, status, x); }); btns.push(x); }
     if (tab === "pending") { b("Aprobar", "cs-btn-primary", "approved"); b("Rechazar", "cs-btn-ghost", "rejected"); }
@@ -178,9 +187,10 @@
     var c = el("article", { class: "mod-card", "data-id": r.id }, [
       el("div", { class: "mod-head" }, [
         el("span", { class: "cs-swatch" + (SWATCH[r.color] ? "" : " cs-swatch-other"), style: SWATCH[r.color] ? "background:" + SWATCH[r.color] : null }),
-        el("strong", { text: new Date(r.observed_at).toLocaleString("es") }),
+        el("strong", { text: when.toLocaleString("es", { timeZone: "America/Havana" }) }),
         el("button", { type: "button", class: "cs-link", text: "Ver en el mapa", onclick: function () { select(r.id, false); if (map) { map.setView([r.lat, r.lon], 16); } mapBox.scrollIntoView({ block: "center", behavior: "smooth" }); } })
       ]),
+      flags.length ? el("div", { class: "mod-flags" }, flags) : null,
       r.color ? el("p", { class: "mod-row" }, [el("em", { text: "Color: " }), el("span", { text: T.colors[r.color] })]) : null,
       chips("Superficie", r.surface, T.surface), chips("Olor", r.odor ? [r.odor] : [], T.odor), chips("Anomalías", r.anomalies, T.anom),
       r.comment ? el("blockquote", { class: "mod-comment", text: r.comment }) : null,

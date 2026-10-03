@@ -16,7 +16,7 @@
       report: "Hacer un reporte", close: "Cerrar", step: "Paso", of: "de", back: "Atrás", next: "Siguiente", send: "Enviar reporte", skip: "Saltar",
       t_loc: "¿Dónde estás?", t_color: "¿De qué color está el agua?", t_surf: "¿Qué ves en la superficie?",
       t_odor: "¿Cómo huele el agua?", t_anom: "¿Observaste algo fuera de lo normal?", t_end: "Cuéntanos más",
-      h_loc: "La fecha y la hora se registran solas.", h_color: "Elige el más parecido.", h_multi: "Marca todo lo que observes.",
+      h_loc: "La fecha y la hora se registran solas.", h_skip: "Puedes dejarlo en blanco.", h_color: "Elige el más parecido. Si no se aprecia (por ejemplo, de noche), pasa a la siguiente.", h_multi: "Marca todo lo que observes. Puedes dejarlo en blanco.",
       loc_btn: "Usar mi ubicación", loc_wait: "Buscando señal GPS…", loc_ok: "Ubicación lista", loc_acc: "precisión aprox.",
       loc_mapbtn: "Marcar en el mapa", loc_pin: "Poner pin aquí", loc_tap: "Mueve el mapa hasta el lugar exacto y pulsa «Poner pin aquí».", loc_err: "No pude obtener el GPS. Mueve el mapa hasta el lugar y pulsa «Poner pin aquí».",
       loc_need: "Marca la ubicación para continuar.",
@@ -46,7 +46,7 @@
       report: "Make a report", close: "Close", step: "Step", of: "of", back: "Back", next: "Next", send: "Send report", skip: "Skip",
       t_loc: "Where are you?", t_color: "What colour is the water?", t_surf: "What do you see on the surface?",
       t_odor: "How does the water smell?", t_anom: "Did you notice anything unusual?", t_end: "Tell us more",
-      h_loc: "Date and time are recorded automatically.", h_color: "Pick the closest one.", h_multi: "Tick everything you observe.",
+      h_loc: "Date and time are recorded automatically.", h_skip: "You can leave it blank.", h_color: "Pick the closest one. If you can't tell (at night, for example), just skip to the next.", h_multi: "Tick everything you observe. You can leave it blank.",
       loc_btn: "Use my location", loc_wait: "Looking for a GPS signal…", loc_ok: "Location ready", loc_acc: "approx. accuracy",
       loc_mapbtn: "Mark on the map", loc_pin: "Drop pin here", loc_tap: "Move the map to the exact spot and press “Drop pin here”.", loc_err: "Couldn't get the GPS. Move the map to the spot and press “Drop pin here”.",
       loc_need: "Mark the location to continue.",
@@ -76,7 +76,7 @@
       report: "Faire un signalement", close: "Fermer", step: "Étape", of: "sur", back: "Retour", next: "Suivant", send: "Envoyer le signalement", skip: "Passer",
       t_loc: "Où êtes-vous ?", t_color: "De quelle couleur est l'eau ?", t_surf: "Que voyez-vous à la surface ?",
       t_odor: "Quelle odeur a l'eau ?", t_anom: "Avez-vous remarqué quelque chose d'inhabituel ?", t_end: "Dites-nous-en plus",
-      h_loc: "La date et l'heure sont enregistrées automatiquement.", h_color: "Choisissez la plus proche.", h_multi: "Cochez tout ce que vous observez.",
+      h_loc: "La date et l'heure sont enregistrées automatiquement.", h_skip: "Vous pouvez laisser vide.", h_color: "Choisissez la plus proche. Si on ne la distingue pas (la nuit, par exemple), passez à la suivante.", h_multi: "Cochez tout ce que vous observez. Vous pouvez laisser vide.",
       loc_btn: "Utiliser ma position", loc_wait: "Recherche du signal GPS…", loc_ok: "Position prête", loc_acc: "précision approx.",
       loc_mapbtn: "Marquer sur la carte", loc_pin: "Placer le repère ici", loc_tap: "Déplacez la carte jusqu'à l'endroit exact et appuyez sur « Placer le repère ici ».", loc_err: "Impossible d'obtenir le GPS. Déplacez la carte jusqu'à l'endroit et appuyez sur « Placer le repère ici ».",
       loc_need: "Indiquez la position pour continuer.",
@@ -338,7 +338,7 @@
     var honey = el("input", { type: "text", class: "cs-hp", tabindex: "-1", autocomplete: "off", "aria-hidden": "true", name: "website" });
     panes.end = el("div", {}, [comment, el("div", { class: "cs-photo-row" }, [photoLbl, photoIn, photoNote]), details, nameIn, contactIn, honey, el("p", { class: "cs-hint", text: t.privacy })]);
 
-    var heads = { loc: [t.t_loc, t.h_loc], color: [t.t_color, t.h_color], surf: [t.t_surf, t.h_multi], odor: [t.t_odor, ""], anom: [t.t_anom, t.h_multi], end: [t.t_end, ""] };
+    var heads = { loc: [t.t_loc, t.h_loc], color: [t.t_color, t.h_color], surf: [t.t_surf, t.h_multi], odor: [t.t_odor, t.h_skip], anom: [t.t_anom, t.h_multi], end: [t.t_end, ""] };
 
     function go(i) {
       if (i > cur && cur === 0 && state.lat == null) { msg.textContent = t.loc_need; return; }
