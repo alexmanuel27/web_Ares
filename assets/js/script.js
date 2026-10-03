@@ -38,6 +38,14 @@
     revealEls.forEach(function (el) { observer.observe(el); });
   }
 
+  // Account link in the menu: "Mi cuenta" when a citizen-science session exists
+  try {
+    if (localStorage.getItem("cwl-cs-session")) {
+      document.querySelectorAll(".nav-account[data-logged]").forEach(function (a) { a.textContent = a.getAttribute("data-logged"); });
+      document.querySelectorAll(".account-icon[data-logged]").forEach(function (a) { a.title = a.getAttribute("data-logged"); a.setAttribute("aria-label", a.title); a.classList.add("is-logged"); });
+    }
+  } catch (e) {}
+
   // Current year in footer
   var yearEl = document.getElementById("year");
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }

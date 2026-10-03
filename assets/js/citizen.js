@@ -24,7 +24,7 @@
       photo: "Añadir foto (opcional)", photo_ok: "Foto lista", photo_rm: "Quitar foto",
       more: "Más detalles (opcional)", fishing: "¿Estás pescando ahora?", yes: "Sí", no: "No",
       catch_: "Captura respecto a lo normal", depth: "Profundidad de trabajo",
-      name: "Tu nombre o apodo (opcional)", contact: "Teléfono o correo (opcional, privado)",
+      name: "Tu nombre (opcional)", contact: "Teléfono o correo (opcional, privado)",
       privacy: "El reporte se revisa antes de aparecer en el mapa. Tu nombre y contacto nunca se publican.",
       empty: "Responde al menos una pregunta, o añade un comentario o una foto.",
       sent: "¡Gracias! Reporte enviado.", sent2: "Lo revisaremos antes de publicarlo en el mapa.",
@@ -34,8 +34,9 @@
       test: "Modo de prueba: el envío aún no está conectado.",
       map_empty: "Todavía no hay reportes publicados.", map_err: "No se pudo cargar el mapa de reportes.",
       p_photo: "Foto", p_comment: "Comentario", p_odor: "Olor", p_surf: "Superficie", p_anom: "Anomalías", p_color: "Color",
-      acct_q: "¿Quieres aparecer en el ranking de colaboradores?", acct_enter: "Entrar o crear cuenta", acct_opt: "Es opcional: puedes reportar sin cuenta.", hello: "Hola", mine: "Mis reportes", logout: "Salir", tab_login: "Entrar", tab_signup: "Crear cuenta", nick: "Apodo", nick_hint: "3 a 20 letras, números, _ o -. Será público en el ranking.", pass_: "Contraseña", pass_hint: "Mínimo 6 caracteres. No se puede recuperar: anótala.", do_login: "Entrar", do_signup: "Crear cuenta", err_nick: "El apodo debe tener de 3 a 20 letras, números, _ o -.", err_pass: "La contraseña debe tener al menos 6 caracteres.", err_taken: "Ese apodo ya está en uso. Elige otro.", err_login: "Correo o contraseña incorrectos.", err_net: "Sin conexión. Inténtalo de nuevo.", err_conf: "No se pudo crear la cuenta ahora. Avisa al equipo.", mine_empty: "Aún no has enviado reportes con esta cuenta.", mine_ok: "publicados", st_pending: "En revisión", st_approved: "Publicado", st_rejected: "No publicado", as_: "Reportando como", rank_title: "Colaboradores", rank_lede: "Ranking por número de reportes publicados. El equipo revisa la calidad de cada reporte antes de aprobarlo.", rank_month: "Este mes", rank_all: "Histórico", rank_empty: "Todavía no hay reportes publicados con cuenta.", leader: "Líder del mes", rank_n: "reportes", p_by: "Por", 
-      email: "Correo electrónico", email_hint: "Para confirmar tu cuenta y recuperar tu contraseña. No se publica.", err_email: "Escribe un correo válido.", check_mail: "Te enviamos un correo para confirmar tu cuenta. Ábrelo, toca el enlace y vuelve aquí. Si no llega, mira en spam.", err_confirm: "Aún no has confirmado tu correo. Revisa tu bandeja y la carpeta de spam.", resend: "Reenviar correo", resent: "Correo reenviado.", forgot: "¿Olvidaste tu contraseña?", recover_sent: "Si ese correo tiene una cuenta, te enviamos un enlace para crear una nueva contraseña.", new_pass: "Nueva contraseña", save_pass: "Guardar contraseña", welcome: "Cuenta confirmada. ¡Bienvenido!", err_link: "El enlace caducó o ya se usó. Pide uno nuevo.", err_mail_send: "No se pudo enviar el correo. Inténtalo más tarde.", pass_hint2: "Mínimo 6 caracteres.", err_taken2: "Ese apodo ya está en uso. Elige otro.", 
+      acct_q: "¿Quieres aparecer en el ranking de colaboradores?", acct_enter: "Entrar o crear cuenta", acct_opt: "Es opcional: puedes reportar sin cuenta.", hello: "Hola", mine: "Mis reportes", logout: "Salir", tab_login: "Entrar", tab_signup: "Crear cuenta", nick: "Nombre de usuario", nick_hint: "3 a 20 letras, números, _ o -. Será público en el ranking.", pass_: "Contraseña", pass_hint: "Mínimo 6 caracteres. No se puede recuperar: anótala.", do_login: "Entrar", do_signup: "Crear cuenta", err_nick: "El nombre de usuario debe tener de 3 a 20 letras, números, _ o -.", err_pass: "La contraseña debe tener al menos 6 caracteres.", err_taken: "Ese nombre de usuario ya está en uso. Elige otro.", err_login: "Correo o contraseña incorrectos.", err_net: "Sin conexión. Inténtalo de nuevo.", err_conf: "No se pudo crear la cuenta ahora. Avisa al equipo.", mine_empty: "Aún no has enviado reportes con esta cuenta.", mine_ok: "publicados", st_pending: "En revisión", st_approved: "Publicado", st_rejected: "No publicado", as_: "Reportando como", rank_title: "Colaboradores", rank_lede: "Ranking por número de reportes publicados. El equipo revisa la calidad de cada reporte antes de aprobarlo.", rank_month: "Este mes", rank_all: "Histórico", rank_empty: "Todavía no hay reportes publicados con cuenta.", leader: "Líder del mes", rank_n: "reportes", p_by: "Por", 
+      email: "Correo electrónico", email_hint: "Para confirmar tu cuenta y recuperar tu contraseña. No se publica.", err_email: "Escribe un correo válido.", check_mail: "Te enviamos un correo para confirmar tu cuenta. Ábrelo, toca el enlace y vuelve aquí. Si no llega, mira en spam.", err_confirm: "Aún no has confirmado tu correo. Revisa tu bandeja y la carpeta de spam.", resend: "Reenviar correo", resent: "Correo reenviado.", forgot: "¿Olvidaste tu contraseña?", recover_sent: "Si ese correo tiene una cuenta, te enviamos un enlace para crear una nueva contraseña.", new_pass: "Nueva contraseña", save_pass: "Guardar contraseña", welcome: "Cuenta confirmada. ¡Bienvenido!", err_link: "El enlace caducó o ya se usó. Pide uno nuevo.", err_mail_send: "No se pudo enviar el correo. Inténtalo más tarde.", pass_hint2: "Mínimo 6 caracteres.", err_taken2: "Ese nombre de usuario ya está en uso. Elige otro.", 
+      card_t: "Crea tu cuenta", card_p: "Es opcional. Con una cuenta tu nombre de usuario aparece en el ranking de colaboradores y puedes ver el estado de tus reportes.", card_new: "Crear cuenta", card_have: "Ya tengo cuenta", 
       colors: { transparente: "Transparente", verde_claro: "Verde claro", verde_oscuro: "Verde oscuro", amarillo_marron: "Amarillo-marrón", rojo_marron: "Rojo-marrón", blanco_lechoso: "Blanco lechoso", otro: "Otro" },
       surface: { ninguna: "Sin anomalías", algas: "Algas flotantes (gran extensión)", espuma: "Espuma", aceite: "Película o brillo de aceite", basura: "Basura flotante / plástico", objetos: "Otros objetos extraños" },
       odor: { normal: "Normal", ligero: "Ligero olor extraño", mal_olor: "Mal olor evidente", quimico: "Olor químico" },
@@ -56,7 +57,7 @@
       photo: "Add a photo (optional)", photo_ok: "Photo ready", photo_rm: "Remove photo",
       more: "More details (optional)", fishing: "Are you fishing now?", yes: "Yes", no: "No",
       catch_: "Catch compared with normal", depth: "Working depth",
-      name: "Your name or nickname (optional)", contact: "Phone or email (optional, private)",
+      name: "Your name (optional)", contact: "Phone or email (optional, private)",
       privacy: "Reports are reviewed before they appear on the map. Your name and contact are never published.",
       empty: "Answer at least one question, or add a comment or a photo.",
       sent: "Thank you! Report sent.", sent2: "We'll review it before publishing it on the map.",
@@ -66,8 +67,9 @@
       test: "Test mode: sending is not connected yet.",
       map_empty: "No reports have been published yet.", map_err: "The reports map could not be loaded.",
       p_photo: "Photo", p_comment: "Comment", p_odor: "Smell", p_surf: "Surface", p_anom: "Anomalies", p_color: "Colour",
-      acct_q: "Want to appear in the contributors ranking?", acct_enter: "Sign in or create an account", acct_opt: "It's optional: you can report without an account.", hello: "Hi", mine: "My reports", logout: "Sign out", tab_login: "Sign in", tab_signup: "Create account", nick: "Nickname", nick_hint: "3 to 20 letters, numbers, _ or -. It will be public in the ranking.", pass_: "Password", pass_hint: "At least 6 characters. It can't be recovered: write it down.", do_login: "Sign in", do_signup: "Create account", err_nick: "The nickname must be 3 to 20 letters, numbers, _ or -.", err_pass: "The password must be at least 6 characters.", err_taken: "That nickname is already taken. Pick another.", err_login: "Wrong email or password.", err_net: "No connection. Please try again.", err_conf: "The account couldn't be created right now. Let the team know.", mine_empty: "You haven't sent any reports with this account yet.", mine_ok: "published", st_pending: "Under review", st_approved: "Published", st_rejected: "Not published", as_: "Reporting as", rank_title: "Contributors", rank_lede: "Ranking by number of published reports. The team checks the quality of every report before approving it.", rank_month: "This month", rank_all: "All time", rank_empty: "No published reports with an account yet.", leader: "Leader of the month", rank_n: "reports", p_by: "By", 
-      email: "Email", email_hint: "To confirm your account and recover your password. Never published.", err_email: "Enter a valid email.", check_mail: "We sent you an email to confirm your account. Open it, tap the link and come back here. Check spam if it doesn't arrive.", err_confirm: "You haven't confirmed your email yet. Check your inbox and spam folder.", resend: "Resend email", resent: "Email sent again.", forgot: "Forgot your password?", recover_sent: "If that email has an account, we sent you a link to set a new password.", new_pass: "New password", save_pass: "Save password", welcome: "Account confirmed. Welcome!", err_link: "The link expired or was already used. Request a new one.", err_mail_send: "The email couldn't be sent. Try again later.", pass_hint2: "At least 6 characters.", err_taken2: "That nickname is already taken. Pick another.", 
+      acct_q: "Want to appear in the contributors ranking?", acct_enter: "Sign in or create an account", acct_opt: "It's optional: you can report without an account.", hello: "Hi", mine: "My reports", logout: "Sign out", tab_login: "Sign in", tab_signup: "Create account", nick: "Username", nick_hint: "3 to 20 letters, numbers, _ or -. It will be public in the ranking.", pass_: "Password", pass_hint: "At least 6 characters. It can't be recovered: write it down.", do_login: "Sign in", do_signup: "Create account", err_nick: "The username must be 3 to 20 letters, numbers, _ or -.", err_pass: "The password must be at least 6 characters.", err_taken: "That username is already taken. Pick another.", err_login: "Wrong email or password.", err_net: "No connection. Please try again.", err_conf: "The account couldn't be created right now. Let the team know.", mine_empty: "You haven't sent any reports with this account yet.", mine_ok: "published", st_pending: "Under review", st_approved: "Published", st_rejected: "Not published", as_: "Reporting as", rank_title: "Contributors", rank_lede: "Ranking by number of published reports. The team checks the quality of every report before approving it.", rank_month: "This month", rank_all: "All time", rank_empty: "No published reports with an account yet.", leader: "Leader of the month", rank_n: "reports", p_by: "By", 
+      email: "Email", email_hint: "To confirm your account and recover your password. Never published.", err_email: "Enter a valid email.", check_mail: "We sent you an email to confirm your account. Open it, tap the link and come back here. Check spam if it doesn't arrive.", err_confirm: "You haven't confirmed your email yet. Check your inbox and spam folder.", resend: "Resend email", resent: "Email sent again.", forgot: "Forgot your password?", recover_sent: "If that email has an account, we sent you a link to set a new password.", new_pass: "New password", save_pass: "Save password", welcome: "Account confirmed. Welcome!", err_link: "The link expired or was already used. Request a new one.", err_mail_send: "The email couldn't be sent. Try again later.", pass_hint2: "At least 6 characters.", err_taken2: "That username is already taken. Pick another.", 
+      card_t: "Create your account", card_p: "It's optional. With an account your username appears in the contributors ranking and you can follow the status of your reports.", card_new: "Create account", card_have: "I already have an account", 
       colors: { transparente: "Clear", verde_claro: "Light green", verde_oscuro: "Dark green", amarillo_marron: "Yellow-brown", rojo_marron: "Red-brown", blanco_lechoso: "Milky white", otro: "Other" },
       surface: { ninguna: "Nothing unusual", algas: "Floating algae (large area)", espuma: "Foam", aceite: "Oil film or sheen", basura: "Floating litter / plastic", objetos: "Other strange objects" },
       odor: { normal: "Normal", ligero: "Slightly odd smell", mal_olor: "Clearly bad smell", quimico: "Chemical smell" },
@@ -88,7 +90,7 @@
       photo: "Ajouter une photo (facultatif)", photo_ok: "Photo prête", photo_rm: "Retirer la photo",
       more: "Plus de détails (facultatif)", fishing: "Pêchez-vous en ce moment ?", yes: "Oui", no: "Non",
       catch_: "Prises par rapport à la normale", depth: "Profondeur de travail",
-      name: "Votre nom ou pseudo (facultatif)", contact: "Téléphone ou e-mail (facultatif, privé)",
+      name: "Votre nom (facultatif)", contact: "Téléphone ou e-mail (facultatif, privé)",
       privacy: "Les signalements sont vérifiés avant d'apparaître sur la carte. Votre nom et vos coordonnées ne sont jamais publiés.",
       empty: "Répondez à au moins une question, ou ajoutez un commentaire ou une photo.",
       sent: "Merci ! Signalement envoyé.", sent2: "Nous le vérifierons avant de le publier sur la carte.",
@@ -98,8 +100,9 @@
       test: "Mode test : l'envoi n'est pas encore connecté.",
       map_empty: "Aucun signalement n'a encore été publié.", map_err: "La carte des signalements n'a pas pu être chargée.",
       p_photo: "Photo", p_comment: "Commentaire", p_odor: "Odeur", p_surf: "Surface", p_anom: "Anomalies", p_color: "Couleur",
-      acct_q: "Voulez-vous figurer au classement des contributeurs ?", acct_enter: "Se connecter ou créer un compte", acct_opt: "C'est facultatif : vous pouvez signaler sans compte.", hello: "Bonjour", mine: "Mes signalements", logout: "Déconnexion", tab_login: "Connexion", tab_signup: "Créer un compte", nick: "Pseudo", nick_hint: "3 à 20 lettres, chiffres, _ ou -. Il sera public dans le classement.", pass_: "Mot de passe", pass_hint: "6 caractères minimum. Impossible à récupérer : notez-le.", do_login: "Se connecter", do_signup: "Créer un compte", err_nick: "Le pseudo doit avoir 3 à 20 lettres, chiffres, _ ou -.", err_pass: "Le mot de passe doit avoir au moins 6 caractères.", err_taken: "Ce pseudo est déjà pris. Choisissez-en un autre.", err_login: "E-mail ou mot de passe incorrect.", err_net: "Pas de connexion. Réessayez.", err_conf: "Le compte n'a pas pu être créé pour le moment. Prévenez l'équipe.", mine_empty: "Vous n'avez pas encore envoyé de signalement avec ce compte.", mine_ok: "publiés", st_pending: "En cours de vérification", st_approved: "Publié", st_rejected: "Non publié", as_: "Signalement en tant que", rank_title: "Contributeurs", rank_lede: "Classement par nombre de signalements publiés. L'équipe vérifie la qualité de chaque signalement avant de l'approuver.", rank_month: "Ce mois-ci", rank_all: "Depuis le début", rank_empty: "Aucun signalement publié avec un compte pour l'instant.", leader: "Leader du mois", rank_n: "signalements", p_by: "Par", 
-      email: "E-mail", email_hint: "Pour confirmer votre compte et récupérer votre mot de passe. Jamais publié.", err_email: "Saisissez un e-mail valide.", check_mail: "Nous vous avons envoyé un e-mail pour confirmer votre compte. Ouvrez-le, touchez le lien et revenez ici. Vérifiez les spams s'il n'arrive pas.", err_confirm: "Vous n'avez pas encore confirmé votre e-mail. Vérifiez votre boîte de réception et vos spams.", resend: "Renvoyer l'e-mail", resent: "E-mail renvoyé.", forgot: "Mot de passe oublié ?", recover_sent: "Si cet e-mail a un compte, nous vous avons envoyé un lien pour définir un nouveau mot de passe.", new_pass: "Nouveau mot de passe", save_pass: "Enregistrer le mot de passe", welcome: "Compte confirmé. Bienvenue !", err_link: "Le lien a expiré ou a déjà été utilisé. Demandez-en un nouveau.", err_mail_send: "L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", pass_hint2: "6 caractères minimum.", err_taken2: "Ce pseudo est déjà pris. Choisissez-en un autre.", 
+      acct_q: "Voulez-vous figurer au classement des contributeurs ?", acct_enter: "Se connecter ou créer un compte", acct_opt: "C'est facultatif : vous pouvez signaler sans compte.", hello: "Bonjour", mine: "Mes signalements", logout: "Déconnexion", tab_login: "Connexion", tab_signup: "Créer un compte", nick: "Nom d'utilisateur", nick_hint: "3 à 20 lettres, chiffres, _ ou -. Il sera public dans le classement.", pass_: "Mot de passe", pass_hint: "6 caractères minimum. Impossible à récupérer : notez-le.", do_login: "Se connecter", do_signup: "Créer un compte", err_nick: "Le nom d'utilisateur doit avoir 3 à 20 lettres, chiffres, _ ou -.", err_pass: "Le mot de passe doit avoir au moins 6 caractères.", err_taken: "Ce nom d'utilisateur est déjà pris. Choisissez-en un autre.", err_login: "E-mail ou mot de passe incorrect.", err_net: "Pas de connexion. Réessayez.", err_conf: "Le compte n'a pas pu être créé pour le moment. Prévenez l'équipe.", mine_empty: "Vous n'avez pas encore envoyé de signalement avec ce compte.", mine_ok: "publiés", st_pending: "En cours de vérification", st_approved: "Publié", st_rejected: "Non publié", as_: "Signalement en tant que", rank_title: "Contributeurs", rank_lede: "Classement par nombre de signalements publiés. L'équipe vérifie la qualité de chaque signalement avant de l'approuver.", rank_month: "Ce mois-ci", rank_all: "Depuis le début", rank_empty: "Aucun signalement publié avec un compte pour l'instant.", leader: "Leader du mois", rank_n: "signalements", p_by: "Par", 
+      email: "E-mail", email_hint: "Pour confirmer votre compte et récupérer votre mot de passe. Jamais publié.", err_email: "Saisissez un e-mail valide.", check_mail: "Nous vous avons envoyé un e-mail pour confirmer votre compte. Ouvrez-le, touchez le lien et revenez ici. Vérifiez les spams s'il n'arrive pas.", err_confirm: "Vous n'avez pas encore confirmé votre e-mail. Vérifiez votre boîte de réception et vos spams.", resend: "Renvoyer l'e-mail", resent: "E-mail renvoyé.", forgot: "Mot de passe oublié ?", recover_sent: "Si cet e-mail a un compte, nous vous avons envoyé un lien pour définir un nouveau mot de passe.", new_pass: "Nouveau mot de passe", save_pass: "Enregistrer le mot de passe", welcome: "Compte confirmé. Bienvenue !", err_link: "Le lien a expiré ou a déjà été utilisé. Demandez-en un nouveau.", err_mail_send: "L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", pass_hint2: "6 caractères minimum.", err_taken2: "Ce nom d'utilisateur est déjà pris. Choisissez-en un autre.", 
+      card_t: "Créez votre compte", card_p: "C'est facultatif. Avec un compte, votre nom d'utilisateur apparaît dans le classement des contributeurs et vous suivez l'état de vos signalements.", card_new: "Créer un compte", card_have: "J'ai déjà un compte", 
       colors: { transparente: "Transparente", verde_claro: "Vert clair", verde_oscuro: "Vert foncé", amarillo_marron: "Jaune-brun", rojo_marron: "Rouge-brun", blanco_lechoso: "Blanc laiteux", otro: "Autre" },
       surface: { ninguna: "Rien d'anormal", algas: "Algues flottantes (grande étendue)", espuma: "Mousse", aceite: "Film ou irisation d'huile", basura: "Déchets flottants / plastique", objetos: "Autres objets étranges" },
       odor: { normal: "Normale", ligero: "Légère odeur étrange", mal_olor: "Mauvaise odeur évidente", quimico: "Odeur chimique" },
@@ -134,7 +137,7 @@
   }
   function loadQueue() { try { return JSON.parse(localStorage.getItem(QUEUE_KEY) || "[]"); } catch (e) { return []; } }
   function saveQueue(q) { try { localStorage.setItem(QUEUE_KEY, JSON.stringify(q)); return true; } catch (e) { return false; } }
-  // Cuenta opcional (Supabase Auth, apodo + contraseña). Sin sesión todo funciona como anónimo.
+  // Cuenta opcional (Supabase Auth, correo + nombre de usuario + contraseña). Sin sesión todo funciona como anónimo.
   var SKEY = "cwl-cs-session", session = null;
   try { session = JSON.parse(localStorage.getItem(SKEY) || "null"); } catch (e) { session = null; }
   function saveSession() { try { if (session) { localStorage.setItem(SKEY, JSON.stringify(session)); } else { localStorage.removeItem(SKEY); } } catch (e) {} }
@@ -516,13 +519,18 @@
     if (!acctBox) { return; }
     acctBox.textContent = "";
     if (session) {
+      acctBox.className = "cs-acct";
       acctBox.appendChild(el("span", { class: "cs-acct-who", text: t.hello + ", @" + session.nick }));
       acctBox.appendChild(el("button", { type: "button", class: "cs-link", text: t.mine, onclick: function () { showAuth("mine"); } }));
       acctBox.appendChild(el("button", { type: "button", class: "cs-link", text: t.logout, onclick: function () { session = null; saveSession(); renderAccount(); resetForm(); } }));
     } else {
-      acctBox.appendChild(el("span", { text: t.acct_q + " " }));
-      acctBox.appendChild(el("button", { type: "button", class: "cs-link", text: t.acct_enter, onclick: function () { showAuth("login"); } }));
-      acctBox.appendChild(el("span", { class: "cs-acct-opt", text: t.acct_opt }));
+      acctBox.className = "cs-acct cs-acct-card";
+      acctBox.appendChild(el("h3", { class: "cs-acct-title", text: t.card_t }));
+      acctBox.appendChild(el("p", { text: t.card_p }));
+      acctBox.appendChild(el("div", { class: "cs-acct-btns" }, [
+        el("button", { type: "button", class: "cs-btn cs-btn-primary", text: t.card_new, onclick: function () { showAuth("signup"); } }),
+        el("button", { type: "button", class: "cs-btn cs-btn-ghost", text: t.card_have, onclick: function () { showAuth("login"); } })
+      ]));
     }
   }
   function showAuth(mode) {
@@ -559,7 +567,7 @@
       btn.disabled = true;
       function fail(err) { btn.disabled = false; msg.textContent = err || t.err_net; }
       if (signup) {
-        // el apodo es público y único: se comprueba antes (los perfiles son de lectura pública)
+        // el nombre de usuario es público y único: se comprueba antes (los perfiles son de lectura pública)
         api("/rest/v1/profiles?select=nickname&nickname=ilike." + encodeURIComponent(n.replace(/[\\_%]/g, "\\$&")) + "&limit=1", { method: "GET" })
           .then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
           .then(function (taken) {
@@ -572,6 +580,7 @@
               if (/weak_password/.test(code)) { msg.textContent = t.err_pass; }
               else if (/email_address_invalid|validation/.test(code)) { msg.textContent = t.err_email; }
               else if (/over_email_send_rate_limit|rate/.test(code)) { msg.textContent = t.err_mail_send; }
+              else if (/mail|smtp/i.test((r.j && r.j.msg) || "") || /smtp|email_send/.test(code)) { msg.textContent = t.err_mail_send; }
               else if (/unexpected_failure/.test(code) || r.status >= 500) { msg.textContent = t.err_taken2; }
               else { msg.textContent = t.err_conf; }
             });
@@ -730,6 +739,7 @@
   if (rankBox) { rankBox.hidden = true; }
   renderAccount();
   handleAuthRedirect();
+  if (/[?&]cuenta=1/.test(location.search)) { history.replaceState(null, "", location.pathname); showAuth(session ? "mine" : "signup"); }
   loadRanking();
   refreshPending();
   loadPublicMap();
