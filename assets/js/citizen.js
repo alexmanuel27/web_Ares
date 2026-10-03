@@ -34,7 +34,8 @@
       test: "Modo de prueba: el envío aún no está conectado.",
       map_empty: "Todavía no hay reportes publicados.", map_err: "No se pudo cargar el mapa de reportes.",
       p_photo: "Foto", p_comment: "Comentario", p_odor: "Olor", p_surf: "Superficie", p_anom: "Anomalías", p_color: "Color",
-      acct_q: "¿Quieres aparecer en el ranking de colaboradores?", acct_enter: "Entrar o crear cuenta", acct_opt: "Es opcional: puedes reportar sin cuenta.", hello: "Hola", mine: "Mis reportes", logout: "Salir", tab_login: "Entrar", tab_signup: "Crear cuenta", nick: "Apodo", nick_hint: "3 a 20 letras, números, _ o -. Será público en el ranking.", pass_: "Contraseña", pass_hint: "Mínimo 6 caracteres. No se puede recuperar: anótala.", do_login: "Entrar", do_signup: "Crear cuenta", err_nick: "El apodo debe tener de 3 a 20 letras, números, _ o -.", err_pass: "La contraseña debe tener al menos 6 caracteres.", err_taken: "Ese apodo ya está en uso. Elige otro.", err_login: "Apodo o contraseña incorrectos.", err_net: "Sin conexión. Inténtalo de nuevo.", err_conf: "No se pudo crear la cuenta ahora. Avisa al equipo.", mine_empty: "Aún no has enviado reportes con esta cuenta.", mine_ok: "publicados", st_pending: "En revisión", st_approved: "Publicado", st_rejected: "No publicado", as_: "Reportando como", rank_title: "Colaboradores", rank_lede: "Ranking por número de reportes publicados. El equipo revisa la calidad de cada reporte antes de aprobarlo.", rank_month: "Este mes", rank_all: "Histórico", rank_empty: "Todavía no hay reportes publicados con cuenta.", leader: "Líder del mes", rank_n: "reportes", p_by: "Por", 
+      acct_q: "¿Quieres aparecer en el ranking de colaboradores?", acct_enter: "Entrar o crear cuenta", acct_opt: "Es opcional: puedes reportar sin cuenta.", hello: "Hola", mine: "Mis reportes", logout: "Salir", tab_login: "Entrar", tab_signup: "Crear cuenta", nick: "Apodo", nick_hint: "3 a 20 letras, números, _ o -. Será público en el ranking.", pass_: "Contraseña", pass_hint: "Mínimo 6 caracteres. No se puede recuperar: anótala.", do_login: "Entrar", do_signup: "Crear cuenta", err_nick: "El apodo debe tener de 3 a 20 letras, números, _ o -.", err_pass: "La contraseña debe tener al menos 6 caracteres.", err_taken: "Ese apodo ya está en uso. Elige otro.", err_login: "Correo o contraseña incorrectos.", err_net: "Sin conexión. Inténtalo de nuevo.", err_conf: "No se pudo crear la cuenta ahora. Avisa al equipo.", mine_empty: "Aún no has enviado reportes con esta cuenta.", mine_ok: "publicados", st_pending: "En revisión", st_approved: "Publicado", st_rejected: "No publicado", as_: "Reportando como", rank_title: "Colaboradores", rank_lede: "Ranking por número de reportes publicados. El equipo revisa la calidad de cada reporte antes de aprobarlo.", rank_month: "Este mes", rank_all: "Histórico", rank_empty: "Todavía no hay reportes publicados con cuenta.", leader: "Líder del mes", rank_n: "reportes", p_by: "Por", 
+      email: "Correo electrónico", email_hint: "Para confirmar tu cuenta y recuperar tu contraseña. No se publica.", err_email: "Escribe un correo válido.", check_mail: "Te enviamos un correo para confirmar tu cuenta. Ábrelo, toca el enlace y vuelve aquí. Si no llega, mira en spam.", err_confirm: "Aún no has confirmado tu correo. Revisa tu bandeja y la carpeta de spam.", resend: "Reenviar correo", resent: "Correo reenviado.", forgot: "¿Olvidaste tu contraseña?", recover_sent: "Si ese correo tiene una cuenta, te enviamos un enlace para crear una nueva contraseña.", new_pass: "Nueva contraseña", save_pass: "Guardar contraseña", welcome: "Cuenta confirmada. ¡Bienvenido!", err_link: "El enlace caducó o ya se usó. Pide uno nuevo.", err_mail_send: "No se pudo enviar el correo. Inténtalo más tarde.", pass_hint2: "Mínimo 6 caracteres.", err_taken2: "Ese apodo ya está en uso. Elige otro.", 
       colors: { transparente: "Transparente", verde_claro: "Verde claro", verde_oscuro: "Verde oscuro", amarillo_marron: "Amarillo-marrón", rojo_marron: "Rojo-marrón", blanco_lechoso: "Blanco lechoso", otro: "Otro" },
       surface: { ninguna: "Sin anomalías", algas: "Algas flotantes (gran extensión)", espuma: "Espuma", aceite: "Película o brillo de aceite", basura: "Basura flotante / plástico", objetos: "Otros objetos extraños" },
       odor: { normal: "Normal", ligero: "Ligero olor extraño", mal_olor: "Mal olor evidente", quimico: "Olor químico" },
@@ -65,7 +66,8 @@
       test: "Test mode: sending is not connected yet.",
       map_empty: "No reports have been published yet.", map_err: "The reports map could not be loaded.",
       p_photo: "Photo", p_comment: "Comment", p_odor: "Smell", p_surf: "Surface", p_anom: "Anomalies", p_color: "Colour",
-      acct_q: "Want to appear in the contributors ranking?", acct_enter: "Sign in or create an account", acct_opt: "It's optional: you can report without an account.", hello: "Hi", mine: "My reports", logout: "Sign out", tab_login: "Sign in", tab_signup: "Create account", nick: "Nickname", nick_hint: "3 to 20 letters, numbers, _ or -. It will be public in the ranking.", pass_: "Password", pass_hint: "At least 6 characters. It can't be recovered: write it down.", do_login: "Sign in", do_signup: "Create account", err_nick: "The nickname must be 3 to 20 letters, numbers, _ or -.", err_pass: "The password must be at least 6 characters.", err_taken: "That nickname is already taken. Pick another.", err_login: "Wrong nickname or password.", err_net: "No connection. Please try again.", err_conf: "The account couldn't be created right now. Let the team know.", mine_empty: "You haven't sent any reports with this account yet.", mine_ok: "published", st_pending: "Under review", st_approved: "Published", st_rejected: "Not published", as_: "Reporting as", rank_title: "Contributors", rank_lede: "Ranking by number of published reports. The team checks the quality of every report before approving it.", rank_month: "This month", rank_all: "All time", rank_empty: "No published reports with an account yet.", leader: "Leader of the month", rank_n: "reports", p_by: "By", 
+      acct_q: "Want to appear in the contributors ranking?", acct_enter: "Sign in or create an account", acct_opt: "It's optional: you can report without an account.", hello: "Hi", mine: "My reports", logout: "Sign out", tab_login: "Sign in", tab_signup: "Create account", nick: "Nickname", nick_hint: "3 to 20 letters, numbers, _ or -. It will be public in the ranking.", pass_: "Password", pass_hint: "At least 6 characters. It can't be recovered: write it down.", do_login: "Sign in", do_signup: "Create account", err_nick: "The nickname must be 3 to 20 letters, numbers, _ or -.", err_pass: "The password must be at least 6 characters.", err_taken: "That nickname is already taken. Pick another.", err_login: "Wrong email or password.", err_net: "No connection. Please try again.", err_conf: "The account couldn't be created right now. Let the team know.", mine_empty: "You haven't sent any reports with this account yet.", mine_ok: "published", st_pending: "Under review", st_approved: "Published", st_rejected: "Not published", as_: "Reporting as", rank_title: "Contributors", rank_lede: "Ranking by number of published reports. The team checks the quality of every report before approving it.", rank_month: "This month", rank_all: "All time", rank_empty: "No published reports with an account yet.", leader: "Leader of the month", rank_n: "reports", p_by: "By", 
+      email: "Email", email_hint: "To confirm your account and recover your password. Never published.", err_email: "Enter a valid email.", check_mail: "We sent you an email to confirm your account. Open it, tap the link and come back here. Check spam if it doesn't arrive.", err_confirm: "You haven't confirmed your email yet. Check your inbox and spam folder.", resend: "Resend email", resent: "Email sent again.", forgot: "Forgot your password?", recover_sent: "If that email has an account, we sent you a link to set a new password.", new_pass: "New password", save_pass: "Save password", welcome: "Account confirmed. Welcome!", err_link: "The link expired or was already used. Request a new one.", err_mail_send: "The email couldn't be sent. Try again later.", pass_hint2: "At least 6 characters.", err_taken2: "That nickname is already taken. Pick another.", 
       colors: { transparente: "Clear", verde_claro: "Light green", verde_oscuro: "Dark green", amarillo_marron: "Yellow-brown", rojo_marron: "Red-brown", blanco_lechoso: "Milky white", otro: "Other" },
       surface: { ninguna: "Nothing unusual", algas: "Floating algae (large area)", espuma: "Foam", aceite: "Oil film or sheen", basura: "Floating litter / plastic", objetos: "Other strange objects" },
       odor: { normal: "Normal", ligero: "Slightly odd smell", mal_olor: "Clearly bad smell", quimico: "Chemical smell" },
@@ -96,7 +98,8 @@
       test: "Mode test : l'envoi n'est pas encore connecté.",
       map_empty: "Aucun signalement n'a encore été publié.", map_err: "La carte des signalements n'a pas pu être chargée.",
       p_photo: "Photo", p_comment: "Commentaire", p_odor: "Odeur", p_surf: "Surface", p_anom: "Anomalies", p_color: "Couleur",
-      acct_q: "Voulez-vous figurer au classement des contributeurs ?", acct_enter: "Se connecter ou créer un compte", acct_opt: "C'est facultatif : vous pouvez signaler sans compte.", hello: "Bonjour", mine: "Mes signalements", logout: "Déconnexion", tab_login: "Connexion", tab_signup: "Créer un compte", nick: "Pseudo", nick_hint: "3 à 20 lettres, chiffres, _ ou -. Il sera public dans le classement.", pass_: "Mot de passe", pass_hint: "6 caractères minimum. Impossible à récupérer : notez-le.", do_login: "Se connecter", do_signup: "Créer un compte", err_nick: "Le pseudo doit avoir 3 à 20 lettres, chiffres, _ ou -.", err_pass: "Le mot de passe doit avoir au moins 6 caractères.", err_taken: "Ce pseudo est déjà pris. Choisissez-en un autre.", err_login: "Pseudo ou mot de passe incorrect.", err_net: "Pas de connexion. Réessayez.", err_conf: "Le compte n'a pas pu être créé pour le moment. Prévenez l'équipe.", mine_empty: "Vous n'avez pas encore envoyé de signalement avec ce compte.", mine_ok: "publiés", st_pending: "En cours de vérification", st_approved: "Publié", st_rejected: "Non publié", as_: "Signalement en tant que", rank_title: "Contributeurs", rank_lede: "Classement par nombre de signalements publiés. L'équipe vérifie la qualité de chaque signalement avant de l'approuver.", rank_month: "Ce mois-ci", rank_all: "Depuis le début", rank_empty: "Aucun signalement publié avec un compte pour l'instant.", leader: "Leader du mois", rank_n: "signalements", p_by: "Par", 
+      acct_q: "Voulez-vous figurer au classement des contributeurs ?", acct_enter: "Se connecter ou créer un compte", acct_opt: "C'est facultatif : vous pouvez signaler sans compte.", hello: "Bonjour", mine: "Mes signalements", logout: "Déconnexion", tab_login: "Connexion", tab_signup: "Créer un compte", nick: "Pseudo", nick_hint: "3 à 20 lettres, chiffres, _ ou -. Il sera public dans le classement.", pass_: "Mot de passe", pass_hint: "6 caractères minimum. Impossible à récupérer : notez-le.", do_login: "Se connecter", do_signup: "Créer un compte", err_nick: "Le pseudo doit avoir 3 à 20 lettres, chiffres, _ ou -.", err_pass: "Le mot de passe doit avoir au moins 6 caractères.", err_taken: "Ce pseudo est déjà pris. Choisissez-en un autre.", err_login: "E-mail ou mot de passe incorrect.", err_net: "Pas de connexion. Réessayez.", err_conf: "Le compte n'a pas pu être créé pour le moment. Prévenez l'équipe.", mine_empty: "Vous n'avez pas encore envoyé de signalement avec ce compte.", mine_ok: "publiés", st_pending: "En cours de vérification", st_approved: "Publié", st_rejected: "Non publié", as_: "Signalement en tant que", rank_title: "Contributeurs", rank_lede: "Classement par nombre de signalements publiés. L'équipe vérifie la qualité de chaque signalement avant de l'approuver.", rank_month: "Ce mois-ci", rank_all: "Depuis le début", rank_empty: "Aucun signalement publié avec un compte pour l'instant.", leader: "Leader du mois", rank_n: "signalements", p_by: "Par", 
+      email: "E-mail", email_hint: "Pour confirmer votre compte et récupérer votre mot de passe. Jamais publié.", err_email: "Saisissez un e-mail valide.", check_mail: "Nous vous avons envoyé un e-mail pour confirmer votre compte. Ouvrez-le, touchez le lien et revenez ici. Vérifiez les spams s'il n'arrive pas.", err_confirm: "Vous n'avez pas encore confirmé votre e-mail. Vérifiez votre boîte de réception et vos spams.", resend: "Renvoyer l'e-mail", resent: "E-mail renvoyé.", forgot: "Mot de passe oublié ?", recover_sent: "Si cet e-mail a un compte, nous vous avons envoyé un lien pour définir un nouveau mot de passe.", new_pass: "Nouveau mot de passe", save_pass: "Enregistrer le mot de passe", welcome: "Compte confirmé. Bienvenue !", err_link: "Le lien a expiré ou a déjà été utilisé. Demandez-en un nouveau.", err_mail_send: "L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", pass_hint2: "6 caractères minimum.", err_taken2: "Ce pseudo est déjà pris. Choisissez-en un autre.", 
       colors: { transparente: "Transparente", verde_claro: "Vert clair", verde_oscuro: "Vert foncé", amarillo_marron: "Jaune-brun", rojo_marron: "Rouge-brun", blanco_lechoso: "Blanc laiteux", otro: "Autre" },
       surface: { ninguna: "Rien d'anormal", algas: "Algues flottantes (grande étendue)", espuma: "Mousse", aceite: "Film ou irisation d'huile", basura: "Déchets flottants / plastique", objetos: "Autres objets étranges" },
       odor: { normal: "Normale", ligero: "Légère odeur étrange", mal_olor: "Mauvaise odeur évidente", quimico: "Odeur chimique" },
@@ -132,7 +135,7 @@
   function loadQueue() { try { return JSON.parse(localStorage.getItem(QUEUE_KEY) || "[]"); } catch (e) { return []; } }
   function saveQueue(q) { try { localStorage.setItem(QUEUE_KEY, JSON.stringify(q)); return true; } catch (e) { return false; } }
   // Cuenta opcional (Supabase Auth, apodo + contraseña). Sin sesión todo funciona como anónimo.
-  var SKEY = "cwl-cs-session", MAIL_DOMAIN = "cubanwaterlab.com", session = null;
+  var SKEY = "cwl-cs-session", session = null;
   try { session = JSON.parse(localStorage.getItem(SKEY) || "null"); } catch (e) { session = null; }
   function saveSession() { try { if (session) { localStorage.setItem(SKEY, JSON.stringify(session)); } else { localStorage.removeItem(SKEY); } } catch (e) {} }
   function authPost(path, body) {
@@ -507,7 +510,7 @@
   function openDialog(d) { if (d.showModal) { d.showModal(); } else { d.setAttribute("open", ""); } document.documentElement.classList.add("cs-lock"); d.scrollTop = 0; }
   function closeDialog(d) { if (d.close) { d.close(); } else { d.removeAttribute("open"); } document.documentElement.classList.remove("cs-lock"); }
   function resetForm() { if (!dlg || dlg.open) { return; } root_.textContent = ""; current = null; finished = false; }
-  function mailFor(nick) { return nick.toLowerCase() + "@" + MAIL_DOMAIN; }
+  function pageUrl() { return location.origin + location.pathname; }  // vuelta tras confirmar el correo / recuperar contraseña
 
   function renderAccount() {
     if (!acctBox) { return; }
@@ -527,33 +530,111 @@
     var card = el("div", { class: "cs-card" });
     authBody.appendChild(card);
     if (mode === "mine") { renderMine(card); openDialog(authDlg); return; }
+    if (mode === "forgot") { renderForgot(card); openDialog(authDlg); return; }
+    if (mode === "newpass") { renderNewPass(card); openDialog(authDlg); return; }
     var signup = mode === "signup";
     card.appendChild(el("div", { class: "mod-tabs", role: "tablist" }, [["login", t.tab_login], ["signup", t.tab_signup]].map(function (x) {
       return el("button", { type: "button", role: "tab", class: "mod-tab", "aria-selected": x[0] === mode ? "true" : "false", text: x[1], onclick: function () { showAuth(x[0]); } });
     })));
-    var nick = el("input", { type: "text", class: "cs-input", maxlength: "20", placeholder: t.nick, "aria-label": t.nick, autocomplete: "username", autocapitalize: "none", spellcheck: "false" });
+    var nick = signup ? el("input", { type: "text", class: "cs-input", maxlength: "20", placeholder: t.nick, "aria-label": t.nick, autocomplete: "nickname", autocapitalize: "none", spellcheck: "false" }) : null;
+    var mail = el("input", { type: "email", class: "cs-input", placeholder: t.email, "aria-label": t.email, autocomplete: signup ? "email" : "username", autocapitalize: "none", spellcheck: "false" });
     var pass = el("input", { type: "password", class: "cs-input", placeholder: t.pass_, "aria-label": t.pass_, autocomplete: signup ? "new-password" : "current-password" });
     var msg = el("p", { class: "cs-msg", role: "alert" });
+    var extra = el("div", { class: "cs-auth-extra" });
     var btn = el("button", { type: "submit", class: "cs-btn cs-btn-primary cs-btn-big", text: signup ? t.do_signup : t.do_login });
-    var form = el("form", { class: "cs-auth-form" }, [nick, signup ? el("p", { class: "cs-hint", text: t.nick_hint }) : null, pass, signup ? el("p", { class: "cs-hint", text: t.pass_hint }) : null, msg, btn]);
+    var form = el("form", { class: "cs-auth-form" }, [nick, signup ? el("p", { class: "cs-hint", text: t.nick_hint }) : null, mail, signup ? el("p", { class: "cs-hint", text: t.email_hint }) : null, pass, signup ? el("p", { class: "cs-hint", text: t.pass_hint2 }) : null, msg, extra, btn,
+      signup ? null : el("button", { type: "button", class: "cs-link", text: t.forgot, onclick: function () { showAuth("forgot"); } })]);
+    function offerResend(email) {
+      extra.textContent = "";
+      extra.appendChild(el("button", { type: "button", class: "cs-link", text: t.resend, onclick: function () {
+        authPost("resend", { type: "signup", email: email, options: { emailRedirectTo: pageUrl() } }).then(function (r) { msg.textContent = r.ok ? t.resent : t.err_mail_send; }, function () { msg.textContent = t.err_net; });
+      } }));
+    }
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); msg.textContent = "";
-      var n = nick.value.trim();
-      if (!/^[A-Za-z0-9_-]{3,20}$/.test(n)) { msg.textContent = t.err_nick; return; }
+      e.preventDefault(); msg.textContent = ""; extra.textContent = "";
+      var n = signup ? nick.value.trim() : "", em = mail.value.trim().toLowerCase();
+      if (signup && !/^[A-Za-z0-9_-]{3,20}$/.test(n)) { msg.textContent = t.err_nick; return; }
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) { msg.textContent = t.err_email; return; }
       if (pass.value.length < 6) { msg.textContent = t.err_pass; return; }
       btn.disabled = true;
-      var req = signup ? authPost("signup", { email: mailFor(n), password: pass.value, data: { nickname: n } }) : authPost("token?grant_type=password", { email: mailFor(n), password: pass.value });
-      req.then(function (r) {
-        btn.disabled = false;
-        if (r.ok && r.j.access_token) { r.j.user = r.j.user || {}; r.j.user.user_metadata = Object.assign({ nickname: n }, r.j.user.user_metadata); setSession(r.j); closeDialog(authDlg); renderAccount(); resetForm(); loadRanking(); flush().then(refreshPending); return; }
-        if (signup) {
-          var code = (r.j && (r.j.error_code || r.j.code)) + "";
-          msg.textContent = /exists|already/i.test(code + (r.j.msg || "")) ? t.err_taken : (/weak_password/.test(code) ? t.err_pass : t.err_conf);
-        } else { msg.textContent = t.err_login; }
-      }, function () { btn.disabled = false; msg.textContent = t.err_net; });
+      function fail(err) { btn.disabled = false; msg.textContent = err || t.err_net; }
+      if (signup) {
+        // el apodo es público y único: se comprueba antes (los perfiles son de lectura pública)
+        api("/rest/v1/profiles?select=nickname&nickname=ilike." + encodeURIComponent(n.replace(/[\\_%]/g, "\\$&")) + "&limit=1", { method: "GET" })
+          .then(function (r) { return r.ok ? r.json() : []; }).catch(function () { return []; })
+          .then(function (taken) {
+            if (taken.length) { fail(t.err_taken2); return; }
+            return authPost("signup?redirect_to=" + encodeURIComponent(pageUrl()), { email: em, password: pass.value, data: { nickname: n } }).then(function (r) {
+              btn.disabled = false;
+              var code = ((r.j && (r.j.error_code || r.j.code)) || "") + "";
+              if (r.ok && r.j.access_token) { startSession(r.j, n); return; }  // por si el proyecto no exige confirmar
+              if (r.ok) { form.textContent = ""; form.appendChild(el("p", { class: "cs-ok", text: t.check_mail })); offerResend(em); form.appendChild(extra); return; }
+              if (/weak_password/.test(code)) { msg.textContent = t.err_pass; }
+              else if (/email_address_invalid|validation/.test(code)) { msg.textContent = t.err_email; }
+              else if (/over_email_send_rate_limit|rate/.test(code)) { msg.textContent = t.err_mail_send; }
+              else if (/unexpected_failure/.test(code) || r.status >= 500) { msg.textContent = t.err_taken2; }
+              else { msg.textContent = t.err_conf; }
+            });
+          }).catch(function () { fail(); });
+      } else {
+        authPost("token?grant_type=password", { email: em, password: pass.value }).then(function (r) {
+          btn.disabled = false;
+          if (r.ok && r.j.access_token) { startSession(r.j); return; }
+          if (/email_not_confirmed/.test((r.j && (r.j.error_code || r.j.code)) + "")) { msg.textContent = t.err_confirm; offerResend(em); return; }
+          msg.textContent = t.err_login;
+        }, function () { fail(); });
+      }
     });
     card.appendChild(form);
     openDialog(authDlg);
+  }
+  function startSession(j, nick) {
+    j.user = j.user || {}; j.user.user_metadata = Object.assign(nick ? { nickname: nick } : {}, j.user.user_metadata);
+    setSession(j); closeDialog(authDlg); renderAccount(); resetForm(); loadRanking(); flush().then(refreshPending);
+  }
+  function renderForgot(card) {
+    var mail = el("input", { type: "email", class: "cs-input", placeholder: t.email, "aria-label": t.email, autocomplete: "email" });
+    var msg = el("p", { class: "cs-msg", role: "alert" });
+    var btn = el("button", { type: "submit", class: "cs-btn cs-btn-primary cs-btn-big", text: t.forgot.replace(/[?¿]/g, "").trim() });
+    var form = el("form", { class: "cs-auth-form" }, [el("h3", { class: "cs-title", text: t.forgot }), mail, msg, btn]);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); btn.disabled = true;
+      authPost("recover?redirect_to=" + encodeURIComponent(pageUrl()), { email: mail.value.trim().toLowerCase() }).then(function (r) {
+        btn.disabled = false; msg.className = r.ok ? "cs-ok" : "cs-msg"; msg.textContent = r.ok ? t.recover_sent : t.err_mail_send;
+      }, function () { btn.disabled = false; msg.textContent = t.err_net; });
+    });
+    card.appendChild(form);
+  }
+  function renderNewPass(card) {
+    var pass = el("input", { type: "password", class: "cs-input", placeholder: t.new_pass, "aria-label": t.new_pass, autocomplete: "new-password" });
+    var msg = el("p", { class: "cs-msg", role: "alert" });
+    var btn = el("button", { type: "submit", class: "cs-btn cs-btn-primary cs-btn-big", text: t.save_pass });
+    var form = el("form", { class: "cs-auth-form" }, [el("h3", { class: "cs-title", text: t.new_pass }), pass, el("p", { class: "cs-hint", text: t.pass_hint2 }), msg, btn]);
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); msg.textContent = "";
+      if (pass.value.length < 6) { msg.textContent = t.err_pass; return; }
+      btn.disabled = true;
+      fetch(C.url + "/auth/v1/user", { method: "PUT", headers: { apikey: C.key, Authorization: "Bearer " + session.access, "Content-Type": "application/json" }, body: JSON.stringify({ password: pass.value }) })
+        .then(function (r) { btn.disabled = false; if (!r.ok) { msg.textContent = t.err_link; return; } closeDialog(authDlg); renderAccount(); resetForm(); loadRanking(); }, function () { btn.disabled = false; msg.textContent = t.err_net; });
+    });
+    card.appendChild(form);
+  }
+  // Vuelta desde el enlace del correo (confirmar cuenta / recuperar contraseña): la sesión llega en el hash de la URL
+  function handleAuthRedirect() {
+    var h = location.hash.replace(/^#/, "");
+    if (!h || !/access_token=|error=/.test(h)) { return; }
+    var p = {}; h.split("&").forEach(function (kv) { var i = kv.indexOf("="); if (i > 0) { p[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, " ")); } });
+    history.replaceState(null, "", location.pathname + location.search);
+    if (p.error) { authBody.textContent = ""; var c = el("div", { class: "cs-card" }, [el("p", { class: "cs-msg", text: t.err_link })]); authBody.appendChild(c); openDialog(authDlg); return; }
+    fetch(C.url + "/auth/v1/user", { headers: { apikey: C.key, Authorization: "Bearer " + p.access_token } })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(function (u) {
+        setSession({ access_token: p.access_token, refresh_token: p.refresh_token, user: u });
+        renderAccount(); resetForm(); loadRanking(); flush().then(refreshPending);
+        if (p.type === "recovery") { showAuth("newpass"); }
+        else { authBody.textContent = ""; authBody.appendChild(el("div", { class: "cs-card cs-done" }, [el("h3", { class: "cs-title", text: t.welcome }), el("button", { type: "button", class: "cs-btn cs-btn-primary", text: t.close, onclick: function () { closeDialog(authDlg); } })])); openDialog(authDlg); }
+      })
+      .catch(function () { authBody.textContent = ""; authBody.appendChild(el("div", { class: "cs-card" }, [el("p", { class: "cs-msg", text: t.err_link })])); openDialog(authDlg); });
   }
   function renderMine(card) {
     card.appendChild(el("h3", { class: "cs-title", text: t.mine + " — @" + session.nick }));
@@ -648,6 +729,7 @@
   rankBox = document.getElementById("cs-ranking");
   if (rankBox) { rankBox.hidden = true; }
   renderAccount();
+  handleAuthRedirect();
   loadRanking();
   refreshPending();
   loadPublicMap();

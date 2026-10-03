@@ -1508,3 +1508,5 @@ footer {
 .cs-rank-n { font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .cs-rank-top { border-color: var(--aqua-bright); box-shadow: inset 4px 0 0 var(--aqua-bright); }
 .cs-rank-top .cs-rank-pos { color: var(--aqua); font-weight: 600; }
+.cs-ok { color: var(--ink); background: color-mix(in srgb, #2f8f5b 16%, var(--panel)); border: 1px solid #2f8f5b; border-radius: 8px; padding: 0.8rem 1rem; font-size: 0.95rem; }
+.cs-auth-extra:empty { display: none; }

@@ -4,7 +4,9 @@
 --
 -- Ajustes en Authentication (panel de Supabase) para que las cuentas funcionen:
 --   · Sign In / Providers → "Allow new users to sign up": ACTIVADO
---   · Sign In / Providers → Email → "Confirm email": DESACTIVADO (las cuentas se crean con apodo + contraseña, sin correo real)
+--   · Sign In / Providers → Email → "Confirm email": ACTIVADO (las cuentas usan correo real + apodo público)
+--   · URL Configuration → Site URL: https://cubanwaterlab.com  y  Redirect URLs: https://cubanwaterlab.com/**
+--   · Para enviar correos de verdad, configura un SMTP propio (Authentication → Emails → SMTP Settings); el servicio gratis de Supabase solo permite unos pocos correos por hora.
 
 -- ───────────── Perfiles (el apodo es público) ─────────────
 create table if not exists public.profiles (
@@ -25,7 +27,7 @@ create or replace function public.handle_new_user() returns trigger
 language plpgsql security definer set search_path = public as $$
 begin
   insert into public.profiles (user_id, nickname)
-  values (new.id, coalesce(nullif(trim(new.raw_user_meta_data ->> 'nickname'), ''), split_part(new.email, '@', 1)))
+  values (new.id, coalesce(nullif(trim(new.raw_user_meta_data ->> 'nickname'), ''), 'user_' || substr(new.id::text, 1, 8)))  -- nunca se deriva del correo
   on conflict (user_id) do nothing;
   return new;
 end;
