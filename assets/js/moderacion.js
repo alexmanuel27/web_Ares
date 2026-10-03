@@ -9,7 +9,7 @@
   var root = document.getElementById("mod-app");
   if (!root || !T || !C.url) { return; }
 
-  var session = null, tab = "pending", rows = [], counts = {}, map, layer, markers = {}, selected = null;
+  var session = null, tab = "pending", MF = { text: "", sort: "new", photo: false, night: false }, rows = [], counts = {}, map, layer, markers = {}, selected = null;
   var TABS = [["pending", "Pendientes"], ["approved", "Publicados"], ["rejected", "Rechazados"]];
 
   function el(tag, attrs, kids) {
@@ -100,7 +100,7 @@
       .catch(function (e) { if (e.message !== "auth") { logout("No se pudo conectar. Inténtalo de nuevo."); } });
   }
 
-  var tabsBox, listBox, mapBox, who;
+  var tabsBox, listBox, mapBox, who, countEl;
   function buildShell() {
     root.textContent = "";
     who = el("span", { class: "mod-who", text: session.email });
@@ -108,7 +108,15 @@
     mapBox = el("div", { id: "mod-map" });
     listBox = el("div", { class: "mod-list" });
     root.appendChild(el("div", { class: "mod-bar" }, [el("h3", { class: "cs-title", text: "Moderación de reportes" }), el("div", { class: "mod-user" }, [who, el("button", { type: "button", class: "cs-link", text: "Salir", onclick: function () { logout(""); } })])]));
-    root.appendChild(tabsBox); root.appendChild(mapBox); root.appendChild(listBox);
+    var search = el("input", { type: "search", class: "cs-input", placeholder: "Buscar en comentarios, nombre, contacto o usuario", "aria-label": "Buscar" });
+    search.addEventListener("input", function () { MF.text = search.value; renderMap(); renderList(); });
+    var sortSel = el("select", { class: "cs-input", "aria-label": "Ordenar" }, [el("option", { value: "new", text: "Más recientes primero" }), el("option", { value: "old", text: "Más antiguos primero" })]);
+    sortSel.addEventListener("change", function () { MF.sort = sortSel.value; renderList(); });
+    function check(label, key) { var c = el("input", { type: "checkbox" }); c.addEventListener("change", function () { MF[key] = c.checked; renderMap(); renderList(); }); return el("label", { class: "cs-fld cs-fld-check" }, [c, el("span", { text: label })]); }
+    countEl = el("p", { class: "cs-count" });
+    root.appendChild(tabsBox);
+    root.appendChild(el("div", { class: "mod-filters" }, [search, sortSel, check("Con foto", "photo"), check("Solo nocturnos", "night"), countEl]));
+    root.appendChild(mapBox); root.appendChild(listBox);
     map = null;
   }
   function render() {
@@ -127,13 +135,14 @@
       layer = L.layerGroup().addTo(map);
     }
     layer.clearLayers(); markers = {};
-    rows.forEach(function (r) {
+    vis().forEach(function (r) {
       var m = L.circleMarker([r.lat, r.lon], style(r, false)).addTo(layer);
       m.on("click", function () { select(r.id, true); });
       markers[r.id] = m;
     });
-    if (!rows.length) { map.setView(HAVANA, 12); }
-    if (rows.length) { map.fitBounds(L.latLngBounds(rows.map(function (r) { return [r.lat, r.lon]; })).pad(0.3), { maxZoom: 15 }); }
+    if (!vis().length) { map.setView(HAVANA, 12); }
+    var vr = vis();
+    if (vr.length) { map.fitBounds(L.latLngBounds(vr.map(function (r) { return [r.lat, r.lon]; })).pad(0.3), { maxZoom: 15 }); }
     setTimeout(function () { map.invalidateSize(); }, 50);
   }
   function style(r, on) { return { radius: on ? 14 : 9, color: on ? "#c0392b" : "#16233d", weight: on ? 4 : 2, fillColor: SWATCH[r.color] || "#f5a300", fillOpacity: 0.95 }; }
@@ -146,14 +155,26 @@
     if (scroll) { var c = listBox.querySelector('[data-id="' + id + '"]'); if (c) { c.scrollIntoView({ block: "center", behavior: "smooth" }); } }
   }
 
+  function isNight(r) { var h = parseInt(new Date(r.observed_at).toLocaleTimeString("es", { timeZone: "America/Havana", hour: "2-digit", hour12: false }), 10); return h >= 20 || h < 6; }
+  function vis() {
+    var q = MF.text.trim().toLowerCase();
+    return rows.filter(function (r) {
+      if (MF.photo && !r.photo_path) { return false; }
+      if (MF.night && !isNight(r)) { return false; }
+      if (q && [r.comment, r.name, r.contact, r.profiles && r.profiles.nickname].join(" ").toLowerCase().indexOf(q) < 0) { return false; }
+      return true;
+    }).sort(function (a, b) { return (new Date(a.observed_at) - new Date(b.observed_at)) * (MF.sort === "old" ? 1 : -1); });
+  }
   function chips(label, arr, dict) {
     var vals = (arr || []).map(function (k) { return dict[k]; }).filter(Boolean);
     return vals.length ? el("p", { class: "mod-row" }, [el("em", { text: label + ": " }), el("span", { text: vals.join(", ") })]) : null;
   }
   function renderList() {
     listBox.textContent = "";
-    if (!rows.length) { listBox.appendChild(el("p", { class: "cs-note", text: "No hay reportes en esta lista." })); return; }
-    rows.forEach(function (r) { listBox.appendChild(card(r)); });
+    var list = vis();
+    if (countEl) { countEl.textContent = list.length === rows.length ? rows.length + " reportes" : list.length + " de " + rows.length + " reportes"; }
+    if (!list.length) { listBox.appendChild(el("p", { class: "cs-note", text: rows.length ? "Ningún reporte coincide con los filtros." : "No hay reportes en esta lista." })); return; }
+    list.forEach(function (r) { listBox.appendChild(card(r)); });
   }
   function act(r, status, button) {
     button.disabled = true;

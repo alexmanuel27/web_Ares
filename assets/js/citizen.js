@@ -37,6 +37,7 @@
       acct_q: "¿Quieres aparecer en el ranking de colaboradores?", acct_enter: "Entrar o crear cuenta", acct_opt: "Es opcional: puedes reportar sin cuenta.", hello: "Hola", mine: "Mis reportes", logout: "Salir", tab_login: "Entrar", tab_signup: "Crear cuenta", nick: "Nombre de usuario", nick_hint: "3 a 20 letras, números, _ o -. Será público en el ranking.", pass_: "Contraseña", pass_hint: "Mínimo 6 caracteres. No se puede recuperar: anótala.", do_login: "Entrar", do_signup: "Crear cuenta", err_nick: "El nombre de usuario debe tener de 3 a 20 letras, números, _ o -.", err_pass: "La contraseña debe tener al menos 6 caracteres.", err_taken: "Ese nombre de usuario ya está en uso. Elige otro.", err_login: "Correo o contraseña incorrectos.", err_net: "Sin conexión. Inténtalo de nuevo.", err_conf: "No se pudo crear la cuenta ahora. Avisa al equipo.", mine_empty: "Aún no has enviado reportes con esta cuenta.", mine_ok: "publicados", st_pending: "En revisión", st_approved: "Publicado", st_rejected: "No publicado", as_: "Reportando como", rank_title: "Colaboradores", rank_lede: "Ranking por número de reportes publicados. El equipo revisa la calidad de cada reporte antes de aprobarlo.", rank_month: "Este mes", rank_all: "Histórico", rank_empty: "Todavía no hay reportes publicados con cuenta.", leader: "Líder del mes", rank_n: "reportes", p_by: "Por", 
       email: "Correo electrónico", email_hint: "Para confirmar tu cuenta y recuperar tu contraseña. No se publica.", err_email: "Escribe un correo válido.", check_mail: "Te enviamos un correo para confirmar tu cuenta. Ábrelo, toca el enlace y vuelve aquí. Si no llega, mira en spam.", err_confirm: "Aún no has confirmado tu correo. Revisa tu bandeja y la carpeta de spam.", resend: "Reenviar correo", resent: "Correo reenviado.", forgot: "¿Olvidaste tu contraseña?", recover_sent: "Si ese correo tiene una cuenta, te enviamos un enlace para crear una nueva contraseña.", new_pass: "Nueva contraseña", save_pass: "Guardar contraseña", welcome: "Cuenta confirmada. ¡Bienvenido!", err_link: "El enlace caducó o ya se usó. Pide uno nuevo.", err_mail_send: "No se pudo enviar el correo. Inténtalo más tarde.", pass_hint2: "Mínimo 6 caracteres.", err_taken2: "Ese nombre de usuario ya está en uso. Elige otro.", 
       card_t: "Crea tu cuenta", card_p: "Es opcional. Con una cuenta tu nombre de usuario aparece en el ranking de colaboradores y puedes ver el estado de tus reportes.", card_new: "Crear cuenta", card_have: "Ya tengo cuenta", 
+      v_map: "Mapa", v_list: "Lista", flt: "Filtros", f_period: "Período", p_all: "Todo el tiempo", p_7: "Últimos 7 días", p_30: "Últimos 30 días", f_color: "Color del agua", f_odor: "Olor", f_anom: "Anomalía", f_all: "Todos", f_text: "Buscar en comentarios o usuarios", f_photo: "Solo con foto", f_sort: "Ordenar", s_new: "Más recientes primero", s_old: "Más antiguos primero", f_clear: "Borrar filtros", f_n: "reportes", f_none: "Ningún reporte coincide con los filtros.", f_more: "Mostrar más", f_see: "Ver en el mapa", 
       colors: { transparente: "Transparente", verde_claro: "Verde claro", verde_oscuro: "Verde oscuro", amarillo_marron: "Amarillo-marrón", rojo_marron: "Rojo-marrón", blanco_lechoso: "Blanco lechoso", otro: "Otro" },
       surface: { ninguna: "Sin anomalías", algas: "Algas flotantes (gran extensión)", espuma: "Espuma", aceite: "Película o brillo de aceite", basura: "Basura flotante / plástico", objetos: "Otros objetos extraños" },
       odor: { normal: "Normal", ligero: "Ligero olor extraño", mal_olor: "Mal olor evidente", quimico: "Olor químico" },
@@ -70,6 +71,7 @@
       acct_q: "Want to appear in the contributors ranking?", acct_enter: "Sign in or create an account", acct_opt: "It's optional: you can report without an account.", hello: "Hi", mine: "My reports", logout: "Sign out", tab_login: "Sign in", tab_signup: "Create account", nick: "Username", nick_hint: "3 to 20 letters, numbers, _ or -. It will be public in the ranking.", pass_: "Password", pass_hint: "At least 6 characters. It can't be recovered: write it down.", do_login: "Sign in", do_signup: "Create account", err_nick: "The username must be 3 to 20 letters, numbers, _ or -.", err_pass: "The password must be at least 6 characters.", err_taken: "That username is already taken. Pick another.", err_login: "Wrong email or password.", err_net: "No connection. Please try again.", err_conf: "The account couldn't be created right now. Let the team know.", mine_empty: "You haven't sent any reports with this account yet.", mine_ok: "published", st_pending: "Under review", st_approved: "Published", st_rejected: "Not published", as_: "Reporting as", rank_title: "Contributors", rank_lede: "Ranking by number of published reports. The team checks the quality of every report before approving it.", rank_month: "This month", rank_all: "All time", rank_empty: "No published reports with an account yet.", leader: "Leader of the month", rank_n: "reports", p_by: "By", 
       email: "Email", email_hint: "To confirm your account and recover your password. Never published.", err_email: "Enter a valid email.", check_mail: "We sent you an email to confirm your account. Open it, tap the link and come back here. Check spam if it doesn't arrive.", err_confirm: "You haven't confirmed your email yet. Check your inbox and spam folder.", resend: "Resend email", resent: "Email sent again.", forgot: "Forgot your password?", recover_sent: "If that email has an account, we sent you a link to set a new password.", new_pass: "New password", save_pass: "Save password", welcome: "Account confirmed. Welcome!", err_link: "The link expired or was already used. Request a new one.", err_mail_send: "The email couldn't be sent. Try again later.", pass_hint2: "At least 6 characters.", err_taken2: "That username is already taken. Pick another.", 
       card_t: "Create your account", card_p: "It's optional. With an account your username appears in the contributors ranking and you can follow the status of your reports.", card_new: "Create account", card_have: "I already have an account", 
+      v_map: "Map", v_list: "List", flt: "Filters", f_period: "Period", p_all: "All time", p_7: "Last 7 days", p_30: "Last 30 days", f_color: "Water colour", f_odor: "Smell", f_anom: "Anomaly", f_all: "All", f_text: "Search comments or users", f_photo: "With photo only", f_sort: "Sort", s_new: "Newest first", s_old: "Oldest first", f_clear: "Clear filters", f_n: "reports", f_none: "No report matches the filters.", f_more: "Show more", f_see: "See on the map", 
       colors: { transparente: "Clear", verde_claro: "Light green", verde_oscuro: "Dark green", amarillo_marron: "Yellow-brown", rojo_marron: "Red-brown", blanco_lechoso: "Milky white", otro: "Other" },
       surface: { ninguna: "Nothing unusual", algas: "Floating algae (large area)", espuma: "Foam", aceite: "Oil film or sheen", basura: "Floating litter / plastic", objetos: "Other strange objects" },
       odor: { normal: "Normal", ligero: "Slightly odd smell", mal_olor: "Clearly bad smell", quimico: "Chemical smell" },
@@ -103,6 +105,7 @@
       acct_q: "Voulez-vous figurer au classement des contributeurs ?", acct_enter: "Se connecter ou créer un compte", acct_opt: "C'est facultatif : vous pouvez signaler sans compte.", hello: "Bonjour", mine: "Mes signalements", logout: "Déconnexion", tab_login: "Connexion", tab_signup: "Créer un compte", nick: "Nom d'utilisateur", nick_hint: "3 à 20 lettres, chiffres, _ ou -. Il sera public dans le classement.", pass_: "Mot de passe", pass_hint: "6 caractères minimum. Impossible à récupérer : notez-le.", do_login: "Se connecter", do_signup: "Créer un compte", err_nick: "Le nom d'utilisateur doit avoir 3 à 20 lettres, chiffres, _ ou -.", err_pass: "Le mot de passe doit avoir au moins 6 caractères.", err_taken: "Ce nom d'utilisateur est déjà pris. Choisissez-en un autre.", err_login: "E-mail ou mot de passe incorrect.", err_net: "Pas de connexion. Réessayez.", err_conf: "Le compte n'a pas pu être créé pour le moment. Prévenez l'équipe.", mine_empty: "Vous n'avez pas encore envoyé de signalement avec ce compte.", mine_ok: "publiés", st_pending: "En cours de vérification", st_approved: "Publié", st_rejected: "Non publié", as_: "Signalement en tant que", rank_title: "Contributeurs", rank_lede: "Classement par nombre de signalements publiés. L'équipe vérifie la qualité de chaque signalement avant de l'approuver.", rank_month: "Ce mois-ci", rank_all: "Depuis le début", rank_empty: "Aucun signalement publié avec un compte pour l'instant.", leader: "Leader du mois", rank_n: "signalements", p_by: "Par", 
       email: "E-mail", email_hint: "Pour confirmer votre compte et récupérer votre mot de passe. Jamais publié.", err_email: "Saisissez un e-mail valide.", check_mail: "Nous vous avons envoyé un e-mail pour confirmer votre compte. Ouvrez-le, touchez le lien et revenez ici. Vérifiez les spams s'il n'arrive pas.", err_confirm: "Vous n'avez pas encore confirmé votre e-mail. Vérifiez votre boîte de réception et vos spams.", resend: "Renvoyer l'e-mail", resent: "E-mail renvoyé.", forgot: "Mot de passe oublié ?", recover_sent: "Si cet e-mail a un compte, nous vous avons envoyé un lien pour définir un nouveau mot de passe.", new_pass: "Nouveau mot de passe", save_pass: "Enregistrer le mot de passe", welcome: "Compte confirmé. Bienvenue !", err_link: "Le lien a expiré ou a déjà été utilisé. Demandez-en un nouveau.", err_mail_send: "L'e-mail n'a pas pu être envoyé. Réessayez plus tard.", pass_hint2: "6 caractères minimum.", err_taken2: "Ce nom d'utilisateur est déjà pris. Choisissez-en un autre.", 
       card_t: "Créez votre compte", card_p: "C'est facultatif. Avec un compte, votre nom d'utilisateur apparaît dans le classement des contributeurs et vous suivez l'état de vos signalements.", card_new: "Créer un compte", card_have: "J'ai déjà un compte", 
+      v_map: "Carte", v_list: "Liste", flt: "Filtres", f_period: "Période", p_all: "Depuis le début", p_7: "7 derniers jours", p_30: "30 derniers jours", f_color: "Couleur de l'eau", f_odor: "Odeur", f_anom: "Anomalie", f_all: "Tous", f_text: "Rechercher dans les commentaires ou utilisateurs", f_photo: "Avec photo seulement", f_sort: "Trier", s_new: "Plus récents d'abord", s_old: "Plus anciens d'abord", f_clear: "Effacer les filtres", f_n: "signalements", f_none: "Aucun signalement ne correspond aux filtres.", f_more: "Afficher plus", f_see: "Voir sur la carte", 
       colors: { transparente: "Transparente", verde_claro: "Vert clair", verde_oscuro: "Vert foncé", amarillo_marron: "Jaune-brun", rojo_marron: "Rouge-brun", blanco_lechoso: "Blanc laiteux", otro: "Autre" },
       surface: { ninguna: "Rien d'anormal", algas: "Algues flottantes (grande étendue)", espuma: "Mousse", aceite: "Film ou irisation d'huile", basura: "Déchets flottants / plastique", objetos: "Autres objets étranges" },
       odor: { normal: "Normale", ligero: "Légère odeur étrange", mal_olor: "Mauvaise odeur évidente", quimico: "Odeur chimique" },
@@ -485,6 +488,97 @@
     }
     return d;
   }
+  // Datos + filtros compartidos por el mapa y la lista
+  var pubRows = [], pubMarkers = {}, view = "map", shown = 30, F = { period: "all", color: "", odor: "", anom: "", text: "", photo: false, sort: "new" };
+  var toolbar, listBox, countEl, fltSummary, mapBoxEl;
+  function filtered() {
+    var now = Date.now(), days = F.period === "all" ? 0 : +F.period, q = F.text.trim().toLowerCase();
+    return pubRows.filter(function (r) {
+      if (days && now - new Date(r.observed_at) > days * 864e5) { return false; }
+      if (F.color && r.color !== F.color) { return false; }
+      if (F.odor && r.odor !== F.odor) { return false; }
+      if (F.anom && (r.anomalies || []).indexOf(F.anom) < 0) { return false; }
+      if (F.photo && !r.photo_path) { return false; }
+      if (q && ((r.comment || "") + " " + (r.nickname || "")).toLowerCase().indexOf(q) < 0) { return false; }
+      return true;
+    }).sort(function (a, b) { return (new Date(a.observed_at) - new Date(b.observed_at)) * (F.sort === "old" ? 1 : -1); });
+  }
+  function listCard(r) {
+    function row(label, val) { return val ? el("p", { class: "mod-row" }, [el("em", { text: label + ": " }), el("span", { text: val })]) : null; }
+    var u = r.photo_path ? C.url + "/storage/v1/object/public/report-photos/" + encodeURIComponent(r.photo_path) : null;
+    return el("article", { class: "mod-card" }, [
+      el("div", { class: "mod-head" }, [
+        el("span", { class: "cs-swatch" + (SWATCH[r.color] ? "" : " cs-swatch-other"), style: SWATCH[r.color] ? "background:" + SWATCH[r.color] : null }),
+        el("strong", { text: new Date(r.observed_at).toLocaleString(LANG) }),
+        el("button", { type: "button", class: "cs-link", text: t.f_see, onclick: function () { setView("map"); var m = pubMarkers[r.id]; if (m) { pubMap.setView([r.lat, r.lon], 16); m.openPopup(); } box_scroll(); } })
+      ]),
+      row(t.p_color, t.colors[r.color]),
+      row(t.p_surf, (r.surface || []).map(function (k) { return t.surface[k]; }).filter(Boolean).join(", ")),
+      row(t.p_odor, t.odor[r.odor]),
+      row(t.p_anom, (r.anomalies || []).map(function (k) { return t.anom[k]; }).filter(Boolean).join(", ")),
+      r.comment ? el("blockquote", { class: "mod-comment", text: r.comment }) : null,
+      u ? el("a", { href: u, target: "_blank", rel: "noopener" }, [el("img", { src: u, alt: t.p_photo, class: "mod-photo", loading: "lazy" })]) : null,
+      r.nickname ? el("p", { class: "mod-coords", text: t.p_by + " @" + r.nickname }) : null
+    ]);
+  }
+  function box_scroll() { if (mapBoxEl && mapBoxEl.scrollIntoView) { mapBoxEl.scrollIntoView({ block: "center", behavior: "smooth" }); } }
+  function renderPublic(fit) {
+    var rows = filtered(), note = document.getElementById("cs-map-note");
+    var active = (F.period !== "all") + !!F.color + !!F.odor + !!F.anom + !!F.text.trim() + F.photo;
+    if (countEl) { countEl.firstChild.textContent = rows.length + " " + t.f_n + " "; countEl.lastChild.hidden = !active; }
+    if (fltSummary) { fltSummary.textContent = t.flt + (active ? " (" + active + ")" : ""); }
+    if (note) { note.textContent = !pubRows.length ? t.map_empty : (!rows.length ? t.f_none : ""); }
+    if (pubMap) {
+      pubLayer.clearLayers(); pubMarkers = {};
+      rows.forEach(function (r) {
+        pubMarkers[r.id] = L.circleMarker([r.lat, r.lon], { radius: 9, color: "#16233d", weight: 2, fillColor: SWATCH[r.color] || "#f5a300", fillOpacity: 0.95 }).bindPopup(popup(r)).addTo(pubLayer);
+      });
+      if (fit && rows.length && view === "map") { pubMap.fitBounds(L.latLngBounds(rows.map(function (r) { return [r.lat, r.lon]; })).pad(0.3), { maxZoom: 15 }); }
+    }
+    if (listBox) {
+      listBox.textContent = "";
+      rows.slice(0, shown).forEach(function (r) { listBox.appendChild(listCard(r)); });
+      if (rows.length > shown) { listBox.appendChild(el("button", { type: "button", class: "cs-btn cs-btn-ghost cs-more", text: t.f_more, onclick: function () { shown += 30; renderPublic(false); } })); }
+    }
+  }
+  function setView(v) {
+    view = v;
+    if (mapBoxEl) { mapBoxEl.hidden = v !== "map"; }
+    if (listBox) { listBox.hidden = v !== "list"; }
+    Array.prototype.forEach.call(toolbar.querySelectorAll(".cs-vtab"), function (b) { b.setAttribute("aria-selected", b.getAttribute("data-v") === v ? "true" : "false"); });
+    if (v === "map" && pubMap) { setTimeout(function () { pubMap.invalidateSize(); }, 30); }
+  }
+  function buildToolbar(sec, box) {
+    mapBoxEl = box;
+    function sel(label, key, opts) {
+      var s = el("select", { class: "cs-input", "aria-label": label }, opts.map(function (o) { return el("option", { value: o[0], text: o[1] }); }));
+      s.addEventListener("change", function () { F[key] = s.value; shown = 30; renderPublic(true); });
+      return el("label", { class: "cs-fld" }, [el("span", { text: label }), s]);
+    }
+    function keys(dict, skip) { return [["", t.f_all]].concat(Object.keys(dict).filter(function (k) { return k !== skip; }).map(function (k) { return [k, dict[k]]; })); }
+    var text = el("input", { type: "search", class: "cs-input", placeholder: t.f_text, "aria-label": t.f_text });
+    text.addEventListener("input", function () { F.text = text.value; shown = 30; renderPublic(true); });
+    var photo = el("input", { type: "checkbox" });
+    photo.addEventListener("change", function () { F.photo = photo.checked; shown = 30; renderPublic(true); });
+    fltSummary = el("summary", { text: t.flt });
+    var panel = el("details", { class: "cs-filters" }, [fltSummary, el("div", { class: "cs-filter-grid" }, [
+      sel(t.f_period, "period", [["all", t.p_all], ["7", t.p_7], ["30", t.p_30]]),
+      sel(t.f_color, "color", keys(t.colors)), sel(t.f_odor, "odor", keys(t.odor)), sel(t.f_anom, "anom", keys(t.anom)),
+      sel(t.f_sort, "sort", [["new", t.s_new], ["old", t.s_old]]),
+      el("label", { class: "cs-fld cs-fld-check" }, [photo, el("span", { text: t.f_photo })]), text])]);
+    countEl = el("p", { class: "cs-count" }, [document.createTextNode(""), el("button", { type: "button", class: "cs-link", text: t.f_clear, hidden: "", onclick: function () {
+      F = { period: "all", color: "", odor: "", anom: "", text: "", photo: false, sort: F.sort }; shown = 30;
+      Array.prototype.forEach.call(panel.querySelectorAll("select"), function (x) { if (x.getAttribute("aria-label") !== t.f_sort) { x.value = x.options[0].value; } });
+      text.value = ""; photo.checked = false; renderPublic(true);
+    } })]);
+    toolbar = el("div", { class: "cs-toolbar" }, [
+      el("div", { class: "mod-tabs", role: "tablist" }, [["map", t.v_map], ["list", t.v_list]].map(function (x) {
+        return el("button", { type: "button", role: "tab", class: "mod-tab cs-vtab", "data-v": x[0], "aria-selected": x[0] === "map" ? "true" : "false", text: x[1], onclick: function () { setView(x[0]); } });
+      })), panel, countEl]);
+    sec.insertBefore(toolbar, box);
+    listBox = el("div", { class: "mod-list cs-public-list", hidden: "" });
+    sec.insertBefore(listBox, box.nextSibling);
+  }
   function loadPublicMap() {
     var box = document.getElementById("cs-public-map");
     if (!box || !LIVE || !window.L) { return; }
@@ -493,18 +587,11 @@
       pubMap = L.map(box).setView(HAVANA, 12);
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19, attribution: "© OpenStreetMap" }).addTo(pubMap);
       pubLayer = L.layerGroup().addTo(pubMap);
+      buildToolbar(document.getElementById("cs-map-section"), box);
     }
     api("/rest/v1/reports_public?select=*&order=observed_at.desc&limit=300", { method: "GET" })
       .then(function (r) { if (!r.ok) { throw 0; } return r.json(); })
-      .then(function (rows) {
-        pubLayer.clearLayers();
-        if (note) { note.textContent = rows.length ? "" : t.map_empty; }
-        rows.forEach(function (r) {
-          var c = SWATCH[r.color] || "#f5a300";
-          L.circleMarker([r.lat, r.lon], { radius: 9, color: "#16233d", weight: 2, fillColor: c, fillOpacity: 0.95 }).bindPopup(popup(r)).addTo(pubLayer);
-        });
-        if (rows.length) { pubMap.fitBounds(L.latLngBounds(rows.map(function (r) { return [r.lat, r.lon]; })).pad(0.3), { maxZoom: 15 }); }
-      })
+      .then(function (rows) { pubRows = rows; renderPublic(true); })
       .catch(function () { if (note) { note.textContent = t.map_err; } });
   }
 
