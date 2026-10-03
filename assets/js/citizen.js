@@ -649,7 +649,8 @@
     card.appendChild(el("h3", { class: "cs-title", text: t.mine + " — @" + session.nick }));
     var list = el("div", { class: "cs-mine" });
     card.appendChild(list);
-    api("/rest/v1/reports?select=id,observed_at,status,comment&order=observed_at.desc&limit=30", { method: "GET" }, true)
+    // el filtro por user_id es necesario: si la cuenta también es moderadora, la política de moderación deja ver todos los reportes
+    api("/rest/v1/reports?select=id,observed_at,status,comment&user_id=eq." + encodeURIComponent(session.uid) + "&order=observed_at.desc&limit=30", { method: "GET" }, true)
       .then(function (r) { if (!r.ok) { throw 0; } return r.json(); })
       .then(function (rows) {
         if (!rows.length) { list.appendChild(el("p", { class: "cs-note", text: t.mine_empty })); return; }
