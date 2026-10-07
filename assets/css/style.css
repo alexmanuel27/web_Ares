@@ -1585,3 +1585,15 @@ footer {
 .gl-prev { left: 0.8rem; top: 50%; transform: translateY(-50%); }
 .gl-next { right: 0.8rem; top: 50%; transform: translateY(-50%); }
 @media (max-width: 640px) { .gl-fig { padding: 3.4rem 0.6rem 1rem; } .gl-prev, .gl-next { top: auto; bottom: 0.8rem; transform: none; } .gl-prev { left: 0.8rem; } .gl-next { right: 0.8rem; } }
+
+/* Aviso de privacidad */
+.privacy-upd { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faint); margin-top: 0.8rem; }
+.privacy-doc { max-width: 72ch; margin-top: 2rem; }
+.privacy-doc h3 { font-size: 1.25rem; margin: 2.2rem 0 0.6rem; }
+.privacy-doc p, .privacy-doc li { color: var(--ink-soft); line-height: 1.7; }
+.privacy-doc p + p, .privacy-doc ul { margin-top: 0.8rem; }
+.privacy-doc ul { padding-left: 1.2rem; display: grid; gap: 0.5rem; }
+.privacy-doc strong { color: var(--ink); }
+.privacy-doc a { color: var(--aqua); text-underline-offset: 2px; }
+.cookie-banner a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.footer-bottom a { text-decoration: underline; text-underline-offset: 2px; }
