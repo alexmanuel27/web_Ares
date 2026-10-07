@@ -1545,3 +1545,13 @@ footer {
 .mod-filters { display: grid; grid-template-columns: 2fr 1fr auto auto; gap: 0.7rem 1rem; align-items: center; margin-bottom: 1rem; }
 .mod-filters .cs-count { grid-column: 1 / -1; }
 @media (max-width: 640px) { .mod-filters { grid-template-columns: 1fr 1fr; } .mod-filters .cs-input:first-child { grid-column: 1 / -1; } }
+
+/* Bitácora: subtítulos de sección y figuras sin recorte (fotos técnicas / verticales) */
+.log-body h4 { font-family: var(--font-mono); font-size: 0.74rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--aqua); margin: 2rem 0 0.5rem; }
+.log-figures.fit { align-items: start; grid-template-columns: repeat(auto-fit, minmax(230px, 320px)); justify-content: start; }
+@media (min-width: 720px) { .log-figures.fit figure.big { grid-column: span 2; } }
+.log-figures.fit img { height: auto; max-height: 460px; object-fit: contain; background: var(--bg-soft); }
+.log-figures.fit figure.wide { grid-column: 1 / -1; }
+.log-figures.fit figure.wide img { max-height: none; }
+.log-figures.fit.solo { grid-template-columns: 1fr; }
+@media (max-width: 640px) { .log-figures.fit { grid-template-columns: 1fr; } }
