@@ -1560,3 +1560,8 @@ footer {
 .hub-card.paper-card h3 { font-size: 1.08rem; line-height: 1.35; margin-bottom: 0.7rem; }
 .hub-card.paper-card:hover { transform: none; border-color: var(--line); box-shadow: none; }
 .paper-author { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink) !important; margin-top: 0.8rem; }
+
+/* Resultados: miniaturas de artículos y ponencias, separador sutil */
+.paper-card.has-thumb .hub-card-thumb { height: 190px; object-fit: contain; background: #fff; padding: 0.5rem; border-bottom: 1px solid var(--line); }
+.hub-card-thumb.thumb-slide { height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.results-divider { border: 0; border-top: 1px solid var(--line); margin: 2.5rem 0; }
