@@ -58,6 +58,9 @@
       if (det.open) {
         bioAudio = new Audio(det.getAttribute("data-track"));
         bioAudio.volume = 0.5;
+        // data-start (segundos): empezar directo en un punto de la pista, p. ej. el coro
+        var start = parseFloat(det.getAttribute("data-start") || "0");
+        if (start) { bioAudio.addEventListener("loadedmetadata", function () { bioAudio.currentTime = start; }, { once: true }); }
         bioAudio.play().catch(function () {});
       }
     });
