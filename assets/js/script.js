@@ -50,20 +50,27 @@
   var yearEl = document.getElementById("year");
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 
-  // Bio soundtrack: play a track while its <details> bio is open
-  var bioAudio = null;
+  // Bio soundtrack: play a track while its <details> bio is open.
+  // Playback starts in the summary's click handler (a real user gesture), because mobile browsers
+  // reject play() when it is called later from the async "toggle" event.
+  var bioAudio = null, bioOwner = null;
+  function stopBio() { if (bioAudio) { bioAudio.pause(); bioAudio = null; bioOwner = null; } }
   document.querySelectorAll(".person-bio-details[data-track]").forEach(function (det) {
-    det.addEventListener("toggle", function () {
-      if (bioAudio) { bioAudio.pause(); bioAudio = null; }
-      if (det.open) {
-        bioAudio = new Audio(det.getAttribute("data-track"));
-        bioAudio.volume = 0.5;
-        // data-start (segundos): empezar directo en un punto de la pista, p. ej. el coro
-        var start = parseFloat(det.getAttribute("data-start") || "0");
-        if (start) { bioAudio.addEventListener("loadedmetadata", function () { bioAudio.currentTime = start; }, { once: true }); }
-        bioAudio.play().catch(function () {});
-      }
+    var summary = det.querySelector("summary");
+    if (!summary) { return; }
+    summary.addEventListener("click", function () {
+      var opening = !det.open;  // el estado cambia después de este clic
+      stopBio();
+      if (!opening) { return; }
+      bioAudio = new Audio(det.getAttribute("data-track"));
+      bioOwner = det;
+      bioAudio.volume = 0.5;
+      // data-start (segundos): empezar directo en un punto de la pista, p. ej. el coro
+      var start = parseFloat(det.getAttribute("data-start") || "0");
+      if (start) { bioAudio.addEventListener("loadedmetadata", function () { this.currentTime = start; }, { once: true }); }
+      bioAudio.play().catch(function () {});
     });
+    det.addEventListener("toggle", function () { if (!det.open && bioOwner === det) { stopBio(); } });
   });
 
   // Cookie consent + Google Analytics (GA4 only loads after explicit consent)
