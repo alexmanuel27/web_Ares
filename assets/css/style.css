@@ -1597,3 +1597,4 @@ footer {
 .privacy-doc a { color: var(--aqua); text-underline-offset: 2px; }
 .cookie-banner a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
 .footer-bottom a { text-decoration: underline; text-underline-offset: 2px; }
+.hub-card-thumb.thumb-fit { height: 190px; object-fit: contain; background: #fff; padding: 0.5rem; border-bottom: 1px solid var(--line); }
